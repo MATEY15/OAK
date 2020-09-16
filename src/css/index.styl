@@ -1,0 +1,122 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+@import ("constructor/**/**")
+
+*
+	box-sizing border-box
+
+html
+	height 100%
+	// background: cBlack
+
+body
+	position relative
+	overflow-x: hidden
+	min-width 320px
+	background: cWhite
+	min-height 100%
+	font-family fr
+	&.overflow
+		overflow hidden
+
+#overlayer
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	z-index 11
+	background cBlack
+
+.align-right
+	float right
+.align-left
+	float left
+
+h1, h2, h3, h4, h5, h6
+	font-family: fb
+
+h1
+	font-size 32px
+h2
+	font-size 30px
+h3
+	font-size 30px
+h4
+	font-size 22px
+h5
+	font-size 18px
+h6
+	font-size 16px
+
+.container
+	box-sizing border-box
+	max-width 1172px
+	width 100%
+	// padding-left 10px
+	// padding-right 10px
+	// margin 0 auto
+	// @media screen and (max-width: 640px)
+	// 	padding-left 20px
+	// 	padding-right 20px
+
+.height-50
+	height 50px
+
+.heading-title
+	&.title-white
+		h2, h3
+			color #fff
+		.link-title
+			a
+				color: #fff
+				&:before
+					background #fff
+	h2, h3
+		font-family fb
+		font-size 30px
+		color #1D428A
+	.link-title
+			a
+				color: #1D428A
+				&:before
+					background #1D428A
+
+.default-links
+	border 12px solid #ECEEEF
+	padding 30px 23px 30px
+	min-height 175px
+	&:not(:last-child)
+		margin-bottom 10px
+	.date
+		display inline-block
+		font-family fr
+		font-size 12px
+		c #B4B4B4
+		margin-bottom 4px
+	p
+		font-size 20px
+		c #000000
+	
+	.document-load
+		margin-top 13px
+		img
+			margin-right 14px
+
+@media (min-width: 1400px)
+	.container
+		box-sizing border-box
+		max-width 1172px
+		width 100%
+
+.col-ds-6
+	width 50%
+.col-ds-4
+	width: 33.333%
+.col-ds-3
+	width 25%

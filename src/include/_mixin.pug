@@ -1,0 +1,27 @@
+mixin menuList(links)
+	ul
+		for i in links
+			li
+				a(href=i.link)=i.name
+
+mixin headingH2(name, desc)
+	.heading-content
+		h2= name
+		p= desc
+
+mixin button(name)
+	button.button-more
+		=name
+		svg(width="41" height="8" viewBox="0 0 41 8").icon-more
+			use(xlink:href="img/icon/sprite.svg#icon-more")
+
+mixin iconSvg(w, h, wp, id)
+	svg(width=w height=h viewBox=wp class=id)
+		use(xlink:href="img/icon/sprite.svg#"+id)
+
+mixin sliderItem(img, text)
+	.news-slider--items
+		a(href="#").img-link
+			img(src=img, alt="Slider img")
+		span.news-date #[img(src="img/icon/clock.svg", alt="Time icon")] 24 Августа 2020
+		a(href="#").news-name= text

@@ -1,0 +1,36 @@
+header.header
+	.container.flex-container
+		
+		.top-menu--wrapper
+			.logo
+				a.logo-link(href="/")
+					img(src="img/logo.svg", alt="")
+
+			.search-head
+				a.search-open(href="#")
+					//- +iconSvg('21', '21', '0 0 21 21', 'icon-search')
+					img(src="img/icon/search.svg", alt="Search-icon")
+				a.open-menu(href="#")
+					span
+					span
+					span
+
+			.top-menu--block
+				span#close-menu.close-menu
+					+iconSvg('23', '23', '0 0 23 23', 'icon-close')
+				ul.top-menu
+					li.active
+						a(href="#") Компания
+					li
+						a(href="#") Новости
+					li
+						a(href="#") Сервисы
+					li
+						a(href="#") Сотрудники
+					li
+						a(href="#") Телефонные справочники
+					li
+						a(href="#") Документы
+		.admin-head
+			.admin-dropdown Василий
+				img(src="img/icon/admin.svg", alt="Admin")

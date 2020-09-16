@@ -1,0 +1,136 @@
+include ../libs/bemto/bemto.pug
+
+block variabl
+
+include include/_mixin
+
+doctype html
+html(lang="en")
+	block head
+		head
+			title= title
+
+			meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+			meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+			meta(name='format-detection', content='telephone=no')
+			link(rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon.png" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon-72x72.png" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon-144x144.png" type="image/x-icon")
+
+			link(rel="stylesheet", href="css/index.css")
+
+			meta(name="theme-color", content="#1D428A")
+			meta(name="msapplication-navbutton-color", content="#1D428A")
+			meta(name="apple-mobile-web-app-status-bar-style", content="#1D428A")
+
+	body
+		//- div#overlayer
+		//- #m-open #[<=]
+		sidebar.m-sidebar
+			#m-close X
+			.m-field
+				input(type="text" placeholder="Tag name")#m-tag.m-input
+			
+			.m-field
+				input(type="checkbox" id="m-visual-border" data-m-fun="outline" data-m-visual-border="1px solid #e3e")
+				label(for="m-visual-border") Visual border
+
+			.m-name-field
+				h5 Color
+			.m-field
+				input(type="color")
+				label(for="m-color") color: #[span.result-m]
+			
+			.m-name-field
+				h5 Margin
+			.m-field
+				input(type="range" id="m-margin-top" data-m-fun="margin-top" data-range min="-100" max="200" value="0")
+				label(for="m-margin-top") margin-top: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-margin-left" data-m-fun="margin-left" data-range min="-100" max="200" value="0")
+				label(for="m-margin-left") margin-left: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-margin-right" data-m-fun="margin-right" data-range min="-100" max="200" value="0")
+				label(for="m-margin-left") margin-right: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-margin-bottom" data-m-fun="margin-bottom" data-range min="-100" max="200" value="0")
+				label(for="m-margin-left") margin-bottom: #[span.result-m 0]
+			
+			.m-name-field
+				h5 Padding
+			.m-field
+				input(type="range" id="m-padding-top" data-m-fun="padding-top" data-range min="-100" max="200" value="0")
+				label(for="m-padding-top") padding-top: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-padding-left" data-m-fun="padding-left" data-range min="-100" max="200" value="0")
+				label(for="m-padding-left") padding-left: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-padding-right" data-m-fun="padding-right" data-range min="-100" max="200" value="0")
+				label(for="m-padding-right") padding-right: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-padding-bottom" data-m-fun="padding-bottom" data-range min="-100" max="200" value="0")
+				label(for="m-padding-bottom") padding-bottom: #[span.result-m 0]
+			
+			.m-name-field
+				h5 Width
+			.m-field
+				input(type="number" id="m-visual-border" data-m-fun="width" data-range min="0" max="2000" value="0").m-input-small
+				
+				label(for="m-visual-border") width: #[span.result-m 0]
+				select
+					option px
+					option %
+			.m-field
+				input(type="range" id="m-width" data-m-fun="width" data-range min="0" max="2000" value="0")
+				label(for="m-width") width: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-max-width" data-m-fun="max-width" data-range min="0" max="2000" value="0")
+				label(for="m-max-width") max-width: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-min-width" data-m-fun="min-width" data-range min="0" max="2000" value="0")
+				label(for="m-min-width") min-width: #[span.result-m 0]
+			
+			.m-name-field
+				h5 Height
+			.m-field
+				input(type="range" id="m-height" data-m-fun="height" data-range min="0" max="2000" value="0")
+				label(for="m-height") height: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-max-height" data-m-fun="max-height" data-range min="0" max="2000" value="0")
+				label(for="m-max-height") max-height: #[span.result-m 0]
+			.m-field
+				input(type="range" id="m-min-height" data-m-fun="min-height" data-range min="0" max="2000" value="0")
+				label(for="m-min-height") min-height: #[span.result-m 0]
+			
+			.m-name-field
+				h5 Display
+			.m-field
+				input(type="checkbox" id="m-visual-border" data-m-fun="display" data-m-visual-border="block")
+				label(for="m-visual-border") Block
+			
+			.m-field
+				input(type="number" id="m-visual-border" data-m-fun="font-size" min="0" max="150" value="14").m-input-small
+				label(for="m-visual-border") font-size: #[span.result-m 0]
+			
+
+		block mobileMenu
+
+		block header
+			include include/header
+
+		block main
+		
+		block footer
+			include include/footer
+
+		.hidden
+			.popup-mail.zoom-anim-dialog#popup-mail
+				p 111
+
+
+		block scripts
+			// script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')
+			// script(src='/js/shape-overlays.js')
+			
+			script(src='js/scripts.js')

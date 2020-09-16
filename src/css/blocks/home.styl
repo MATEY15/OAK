@@ -1,0 +1,603 @@
+.section-news
+  position relative
+  background #1D428A // url(../img/bg.png)
+  padding-bottom 19px
+  padding-top 24px
+  &:before
+    position absolute
+    top 0
+    left 0
+    display block
+    content: ""
+    width 100%
+    height 100%
+    background url(../img/bg.png)
+    background-position center center
+    opacity .08
+  .container
+    position relative
+
+.news-head
+  display flex
+  justify-content space-between
+  margin-bottom 28px
+
+.heading-title
+  display flex
+  .link-title
+    margin-left 50px
+    padding-top 9px
+    a
+      position relative
+      font-family fr
+      font-size 14px
+      color #1D428A
+      text-decoration none
+      &:before
+        position absolute
+        bottom -2px
+        left 0
+        content: ""
+        display block
+        height 2px
+        width 100%
+        background #fff
+
+.news-name,
+.news-date
+  display block
+
+.news-slider
+  .slick-list
+    margin 0 -7.5px
+
+.news-slider--items
+  padding 0 7.5px
+
+  .img-link
+    position relative
+    display inline-block
+    max-height: 222px
+    min-height: 222px
+    width 100%
+    overflow hidden
+    
+    img
+      position absolute
+      top 50%
+      left 50%
+      height 100%
+      width auto
+      tt(-50%, -50%)
+
+
+.news-date
+  display flex
+  align-items center
+  font-family fr
+  font-size 13px
+  c#fff
+  margin-top 19px
+  
+  img
+    margin-right 7px
+.news-name
+  font-family fb
+  font-size 14px
+  text-decoration none
+  margin-top 12px
+  line-height 1.4
+  min-height 58px
+  c#fff
+  max-width 300px
+
+.slider-arrows--header
+  display flex
+  flex-direction: row
+  margin-top 4px
+  .slick-arrow
+    position relative
+    display flex
+    align-items center
+    justify-content center
+    width 50px
+    height 30px
+    border: 2px solid #fff
+    cursor pointer
+    z-index 100
+    user-select none
+
+  .top-sliser--next
+    margin-left 20px
+    img
+      transform: rotateZ(180deg)
+
+// Phone Book
+
+.section-phonebook
+  padding-top 37px
+  .heading-title
+    margin-bottom 26px
+
+.form-phonebook
+  display flex
+  input
+    flex 1
+    border: 3px solid #ECEEEF
+    min-height 53px
+    padding 10px 25px
+    font-size 22px
+    font-family fr
+    color: #999999
+    &::-webkit-input-placeholder
+      color: #999999
+      font-size 22px
+    &::-moz-placeholder
+      color: #999999
+      font-size 22px
+    &:-ms-input-placeholder
+      color: #999999
+      font-size 22px
+    &:-moz-placeholder
+      color: #999999
+      font-size 22px
+
+  .btn-phonebook
+    display flex
+    align-items center
+    justify-content center
+    background #1D428A
+    color #fff
+    min-width 170px
+    margin-left 10px
+    font-size 22px
+    svg
+      margin-right 15px
+
+.section-phonebook
+  padding-bottom 22px
+  .navigate-links--wrapper
+    margin-top 55px
+
+.navigate-links--wrapper
+  display flex
+  flex-direction: row
+  margin 0 -15px
+  .col-ds-3
+    width 25%
+    padding 0 15px
+.navigate-links
+  position relative
+  display flex
+  align-items center
+  justify-content space-between
+  width 100%
+  min-height 130px
+  border 12px solid #ECEEEF
+  text-decoration none
+  padding 20px 23px 24px 20px
+  font-family fb
+  font-size 22px
+  c #5B6770
+  trn(.15s)
+  &:hover
+    // border: 12px solid #5B6770
+    box-shadow: 0 5px 10px 1px rgba(91, 103, 112, .4)
+    span
+      c #1D428A
+    .icon--arrow-link
+        stroke #1D428A
+        tt(5px, 0)
+    .icon-arrow
+      border-color #1D428A
+      // transform: rotateZ(45deg) translate(4px, -4px)
+  &.private-cabinet
+    background-image url('../img/icon/nav-kink--bg.svg')
+    background-repeat no-repeat
+    background-position 144px 18px
+    span
+      c #1D428A
+  .counter
+    position absolute
+    top 0
+    right 0
+    display inline-block
+    min-width 26px
+    height 26px
+    background #DA291C
+    font-size 18px
+    font-family fr
+    c #fff
+    text-align center
+    font-style normal
+    padding 3px
+  span
+    display inline-block
+    max-width 145px
+    font-family fb
+    font-size 22px
+    c #5B6770
+    trn(.15s)
+  
+  .icon--arrow-link
+    position relative
+    fill: transparent
+    stroke: #5B6770
+    stroke-width: 4px
+    trn(.15s)
+
+.icon-arrow
+  position relative
+  display inline-block
+  min-width 20px
+  min-height 20px
+  border-width: 4px 4px 0 0
+  border-style: solid
+  border-color: #5B6770
+  transform: rotateZ(45deg)
+  trn(.15s)
+
+// Birthday
+
+.section-birthday
+  background #ECEEEF
+
+.birthday-calendar
+  display flex
+  flex-direction: row
+  .col-ds-6
+    width 50%
+    padding-top 28px
+    padding-bottom 45px
+  .heading-title
+    margin-bottom 21px
+
+.calendar-main
+  border-left: 15px solid #fff
+  padding-left 50px
+.birthday-main
+  border-right: 15px solid #fff
+  padding-right 24px
+
+.birthday-now--wrapper
+  display flex
+  flex-direction: row
+
+.birthday-now--people
+  min-width 185px
+  margin-right 10px
+
+.birthday-now--item
+  &:not(:last-child)
+    margin-bottom 23px
+
+.birthday-now--img
+  position relative
+  max-width 116px
+  &:before
+    position absolute
+    bottom 7px
+    right -12px
+    content ""
+    display block
+    width 25px
+    height 40px
+    background-image url(../img/icon/birthday-people--bg.svg)
+    background-repeat no-repeat
+    z-index 50
+.birthday-now--img-container
+  position relative
+  margin-bottom 20px
+  max-width 116px
+  min-width 116px
+  max-height: 157px
+  min-height: 157px
+  overflow hidden
+  img
+    position absolute
+    top 50%
+    left 50%
+    height 100%
+    width auto
+    tt(-50%, -50%)
+
+.birthday-now--name
+  p
+    c #5B6770
+    font-family fb
+    font-size 11px
+    margin-bottom 3px
+  span
+    display block
+    c #DA291C
+    font-family fr
+    font-size 11px
+
+.birthday-now--list
+  position relative
+  flex 1
+.birthday-now--ul
+  li
+    padding 13px 20px 14px
+    font-family fb
+    c #5B6770
+    font-size 14px
+    &:nth-child(odd)
+      background #fff
+    span
+      display block
+      font-family fr
+      font-size 14px
+      c #5B6770
+
+/* Info Sistems */
+
+.section-sistems
+  padding-top 48px
+  padding-bottom 73px
+  .sistems-wrapper
+    display flex
+    flex-direction: row
+    margin 0 -15px
+  
+  .heading-title
+    margin-bottom 22px
+  
+  .col-ds-6
+    padding 0 15px
+
+.info-sistems
+  position relative
+
+.info-sistems--block
+  border: 12px solid #ECEEEF
+  padding 14px 25px 65px
+
+.list-sistems
+  li
+    &:not(:last-child)
+      border-bottom 3px solid #ECEEEF
+  a
+    position relative
+    display inline-block
+    width 100%
+    padding 33px 0 33px
+    padding-right 24px
+    font-family fr
+    font-size 18px
+    c #000
+    text-decoration none
+    &:hover
+      &:before
+        border-color #000
+    &:before
+      position absolute
+      top 50%
+      right 0
+      content: ""
+      margin-top -7px
+      display: inline-block
+      width: 14px
+      height: 14px
+      border-width: 3px 3px 0 0
+      border-style: solid
+      border-color: #ECEEEF
+      transform: rotateZ(45deg)
+      trn(.15s)
+
+.order-items
+  border: 12px solid #ECEEEF
+  padding 18px 20px 24px 24px
+  &:not(:last-child)
+    margin-bottom 10px
+  .date
+    font-family fr
+    font-size 12px
+    c #B4B4B4
+    display block
+    margin-bottom 12px
+  p
+    font-family fr
+    font-size 12px
+    c #000000
+    line-height 1.6
+
+.document-load
+  display inline-block
+  font-family fb
+  font-size 12px
+  c #1D428A
+  text-decoration none
+  margin-top 5px
+  img
+    position relative
+    top 4px
+    margin-right 5px
+
+/* Media */
+
+.section-media
+  position relative
+  background #1D428A
+  padding-top 52px
+  padding-bottom 78px
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    content: ""
+    width: 100%
+    height: 100%
+    background: url(../img/bg.png)
+    background-position: center center
+    opacity: .08
+  .container
+    position relative
+
+.media-wrapper
+  display flex
+  flex-direction: row
+  margin 0 -30px
+  .col-ds-4
+    padding 0 30px
+  
+  .heading-title
+    margin-bottom 28px
+
+.photo-wrapper
+  display flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content space-between
+  margin -7px
+
+.gallery-block
+  padding 7px
+  font-size 0
+  width 50%
+
+.gallery-img
+  position relative
+  display inline-block
+  font-size inherit
+  max-width 162px
+  min-width 162px
+  max-height: 98px
+  min-height: 98px
+  overflow hidden
+  img
+    position absolute
+    top 50%
+    left 50%
+    width 100%
+    height auto
+    tt(-50%, -50%)
+
+
+.video-wrapper
+  a
+    position relative
+    display inline-block
+    font-size 0
+  
+  .play-button
+    position absolute
+    top 50%
+    left 50%
+    tt(-50%, -50%)
+    width 50px
+    height 50px
+    background #1D428A
+    span
+      display block
+      width: 0
+      height: 0
+      border-top: 10px solid transparent
+      border-left: 16px solid #fff
+      border-bottom: 10px solid transparent
+      margin 15px 20px
+
+.document-wrapper
+  .document-img
+    position relative
+    font-size 0
+  .link-document
+    position absolute
+    left 0
+    bottom 0
+    background #fff
+    .document-load
+      padding 12px 23px 18px 18px
+      margin-top 0
+      img
+        margin-right 8px
+
+/* Job Group */
+
+.section-job-group
+  padding-top 62px
+  padding-bottom 50px
+
+  .heading-title
+    margin-bottom 32px
+
+.job-group
+  display flex
+  flex-direction: row
+  margin 0 -15px
+  .col-ds-3
+    padding 0 15px
+
+.job-group--item
+  display flex
+  flex-direction: column
+  // justify-content space-between
+  border 12px solid #ECEEEF
+  padding 20px 20px 23px
+  text-decoration none
+  min-height 196px
+  trn(.15s)
+  &:hover
+    background #1D428A
+    border 12px solid #1D428A
+    svg
+      fill #fff
+    h4,
+    span
+      c #fff
+  svg
+    fill #1D428A
+    trn(.15s)
+  h4
+    font-family fb
+    font-size 20px
+    c #5B6770
+    trn(.15s)
+    margin-bottom 2px
+  span
+    font-family fr
+    font-size 13px
+    c #A2A8AC
+    trn(.15s)
+
+.job-group--text
+  margin-top auto
+
+/* Mass Media */
+
+.section--mass-media
+  padding-top 11px
+  padding-bottom 67px
+
+.mass-media
+  .heading-title
+    margin-bottom 23px
+
+.link-more
+  position relative
+  display flex
+  align-items center
+  font-family fb
+  font-size 12px
+  color: #1D428A
+  text-decoration none
+  margin-top 20px
+  &:before
+    position relative
+    content ""
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-width: 4px 4px 0 0
+    border-style: solid
+    border-color: #1D428A
+    transform: rotate(45deg)
+    trn(.15s)
+    margin-right 10px
+
+.close-menu
+  display none
+.top-menu--block
+  align-items center
+  display flex

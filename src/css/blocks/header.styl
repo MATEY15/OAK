@@ -1,0 +1,93 @@
+.header
+	padding-top 15px
+	min-height 75px
+	
+	.flex-container
+		display flex
+		flex-wrap wrap
+		flex-direction row
+		justify-content space-between
+
+.top-menu--wrapper
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+.logo
+	margin-right 43px
+	&-link
+		display inline-block
+
+.top-menu
+	padding-left 28px
+	display: -webkit-box
+	display: -moz-box
+	display: -webkit-flex
+	display: flex
+	// display: -ms-flexbox
+	align-items center
+
+	li
+		float left
+		&:not(:last-child)
+			margin-right 44px
+		a
+			font-family fl
+			font-size 15px
+			text-decoration none
+			color #000000
+			trn(.15s)
+
+.search-head
+	display flex
+	padding-top 11px
+
+.search-open
+	display inline-block
+	max-height 19px
+	margin-right 30px
+
+.open-menu
+	display inline-block
+	width 22px
+	height 20px
+	display flex
+	flex-direction: column
+	span
+		display inline-block
+		height 1px
+		width 100%
+		background #000
+		&:not(:last-child)
+			margin-bottom 8px
+
+.icon-burger
+	fill #000000
+
+.admin-dropdown
+	font-family fl
+	font-size 15px
+	color #000000
+	margin-top 6px
+	trn(.15s)
+	cursor pointer
+	display inline-block
+
+	&:after
+		position relative
+		float right
+		margin-top 10px
+		width 10px
+		height 8px
+		content: ""
+		display block
+		background-image url('../img/icon/arrow-dropdown.svg')
+		background-repeat no-repeat
+		margin-left 10px
+
+	img
+		position relative
+		top 5px
+		margin-left 8px
