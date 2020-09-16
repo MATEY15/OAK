@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/apple-touch-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/apple-touch-icon-72x72.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/apple-touch-icon-144x144.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="theme-color" content="#1D428A">
+    <meta name="msapplication-navbutton-color" content="#1D428A">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1D428A">
+  </head>
+  <body>
+    <sidebar class="m-sidebar">
+      <div id="m-close">X</div>
+      <div class="m-field">
+        <input class="m-input" type="text" placeholder="Tag name" id="m-tag">
+      </div>
+      <div class="m-field">
+        <input type="checkbox" id="m-visual-border" data-m-fun="outline" data-m-visual-border="1px solid #e3e">
+        <label for="m-visual-border">Visual border</label>
+      </div>
+      <div class="m-name-field">
+        <h5>Color</h5>
+      </div>
+      <div class="m-field">
+        <input type="color">
+        <label for="m-color">color: <span class="result-m"></span></label>
+      </div>
+      <div class="m-name-field">
+        <h5>Margin</h5>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-margin-top" data-m-fun="margin-top" data-range min="-100" max="200" value="0">
+        <label for="m-margin-top">margin-top: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-margin-left" data-m-fun="margin-left" data-range min="-100" max="200" value="0">
+        <label for="m-margin-left">margin-left: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-margin-right" data-m-fun="margin-right" data-range min="-100" max="200" value="0">
+        <label for="m-margin-left">margin-right: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-margin-bottom" data-m-fun="margin-bottom" data-range min="-100" max="200" value="0">
+        <label for="m-margin-left">margin-bottom: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-name-field">
+        <h5>Padding</h5>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-padding-top" data-m-fun="padding-top" data-range min="-100" max="200" value="0">
+        <label for="m-padding-top">padding-top: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-padding-left" data-m-fun="padding-left" data-range min="-100" max="200" value="0">
+        <label for="m-padding-left">padding-left: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-padding-right" data-m-fun="padding-right" data-range min="-100" max="200" value="0">
+        <label for="m-padding-right">padding-right: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-padding-bottom" data-m-fun="padding-bottom" data-range min="-100" max="200" value="0">
+        <label for="m-padding-bottom">padding-bottom: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-name-field">
+        <h5>Width</h5>
+      </div>
+      <div class="m-field">
+        <input class="m-input-small" type="number" id="m-visual-border" data-m-fun="width" data-range min="0" max="2000" value="0">
+        <label for="m-visual-border">width: <span class="result-m">0</span></label>
+        <select>
+          <option>px</option>
+          <option>%</option>
+        </select>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-width" data-m-fun="width" data-range min="0" max="2000" value="0">
+        <label for="m-width">width: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-max-width" data-m-fun="max-width" data-range min="0" max="2000" value="0">
+        <label for="m-max-width">max-width: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-min-width" data-m-fun="min-width" data-range min="0" max="2000" value="0">
+        <label for="m-min-width">min-width: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-name-field">
+        <h5>Height</h5>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-height" data-m-fun="height" data-range min="0" max="2000" value="0">
+        <label for="m-height">height: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-max-height" data-m-fun="max-height" data-range min="0" max="2000" value="0">
+        <label for="m-max-height">max-height: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-field">
+        <input type="range" id="m-min-height" data-m-fun="min-height" data-range min="0" max="2000" value="0">
+        <label for="m-min-height">min-height: <span class="result-m">0</span></label>
+      </div>
+      <div class="m-name-field">
+        <h5>Display</h5>
+      </div>
+      <div class="m-field">
+        <input type="checkbox" id="m-visual-border" data-m-fun="display" data-m-visual-border="block">
+        <label for="m-visual-border">Block</label>
+      </div>
+      <div class="m-field">
+        <input class="m-input-small" type="number" id="m-visual-border" data-m-fun="font-size" min="0" max="150" value="14">
+        <label for="m-visual-border">font-size: <span class="result-m">0</span></label>
+      </div>
+    </sidebar>
+    <header class="header">
+      <div class="container flex-container">
+        <div class="top-menu--wrapper">
+          <div class="logo"><a class="logo-link" href="/"><img src="img/logo.svg" alt=""></a></div>
+          <div class="search-head"><a class="search-open" href="#"><img src="img/icon/search.svg" alt="Search-icon"></a><a class="open-menu" href="#"><span></span><span></span><span></span></a></div>
+          <div class="top-menu--block"><span class="close-menu" id="close-menu">
+              <svg class="icon-close" width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="img/icon/sprite.svg#icon-close"></use>
+              </svg></span>
+            <ul class="top-menu">
+              <li class="active"><a href="#">Компания</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Сервисы</a></li>
+              <li><a href="#">Сотрудники</a></li>
+              <li><a href="#">Телефонные справочники</a></li>
+              <li><a href="#">Документы</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="admin-head">
+          <div class="admin-dropdown">Василий<img src="img/icon/admin.svg" alt="Admin"></div>
+        </div>
+      </div>
+    </header>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-head"><a class="logo-footer" href="#"><img src="img/footer-logo.svg" alt="Logo"></a></div>
+        <div class="footer-bottom row">
+          <div class="col-md-2">
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Компания</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Руководство</a></li>
+                <li><a href="#">Стратегия</a></li>
+                <li><a href="#">Предприятия ОАК</a></li>
+                <li><a href="#">История</a></li>
+                <li><a href="#">Ценности</a></li>
+                <li><a href="#">Фотогалерея</a></li>
+                <li><a href="#">Видеогалерея</a></li>
+              </ul>
+            </div>
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Документы</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Приказы</a></li>
+                <li><a href="#">Охрана труда</a></li>
+                <li><a href="#">Фирменный стиль</a></li>
+                <li><a href="#">Шаблоны документов</a></li>
+                <li><a href="#">Производственный календарь</a></li>
+                <li><a href="#">Информационный массив aналитического департамента</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Новости</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Обзор СМИ</a></li>
+                <li><a href="#">Объявления</a></li>
+                <li><a href="#">Журнал "Горизонты"</a></li>
+                <li><a href="#">Мероприятия</a></li>
+              </ul>
+            </div>
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Информационная безопасность</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Новости информационной безопасности</a></li>
+                <li><a href="#">Внутренние нормативные документы по информационной безопасности</a></li>
+                <li><a href="#">Законодательство в области информационной безопасности</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Сервисы</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Информационные системы</a></li>
+                <li><a href="#">Рабочие группы</a></li>
+                <li><a href="#">Обучение</a></li>
+                <li><a href="#">Календарь компании</a></li>
+                <li><a href="#">Опросы</a></li>
+              </ul>
+            </div>
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Противодействие коррупции</h4>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Учебные мероприятия. Презентации</a></li>
+                <li><a href="#">ЛНА ПАО ОАК</a></li>
+                <li><a href="#">Законодательство</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-2">
+            <div class="footer-list--wrapper">
+              <div class="footer-list--title">
+                <h4>Соцсети</h4>
+              </div>
+              <ul class="footer--sicial-list">
+                <li><a href="#"><span>
+                      <svg class="icon-vk" width="15" height="9" viewBox="0 0 15 9">
+                        <use xlink:href="img/icon/sprite.svg#icon-vk"></use>
+                      </svg></span>Вконтакте</a></li>
+                <li><a href="#"><span>
+                      <svg class="icon-facebook" width="13" height="13" viewBox="0 0 13 13">
+                        <use xlink:href="img/icon/sprite.svg#icon-facebook"></use>
+                      </svg></span>Facebook</a></li>
+                <li><a href="#"><span>
+                      <svg class="icon-inst" width="13" height="14" viewBox="0 0 13 14">
+                        <use xlink:href="img/icon/sprite.svg#icon-inst"></use>
+                      </svg></span>Instagram</a></li>
+                <li><a href="#"><span>
+                      <svg class="icon-twitter" width="16" height="13" viewBox="0 0 16 13">
+                        <use xlink:href="img/icon/sprite.svg#icon-twitter"></use>
+                      </svg></span>Twitter</a></li>
+                <li><a href="#"><span>
+                      <svg class="icon-youtube" width="15" height="11" viewBox="0 0 15 11">
+                        <use xlink:href="img/icon/sprite.svg#icon-youtube"></use>
+                      </svg></span>YouTube</a></li>
+              </ul>
+            </div>
+            <p class="copy-footer">© ПАО ОАК 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="hidden">
+      <div class="popup-mail zoom-anim-dialog" id="popup-mail">
+        <p>111</p>
+      </div>
+    </div>
+    <!-- script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')-->
+    <!-- script(src='/js/shape-overlays.js')-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
