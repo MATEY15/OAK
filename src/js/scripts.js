@@ -1,5 +1,6 @@
 //= jquery.min.js
 //= jquery.magnific-popup.min.js
+//= calender.js
 //= constructor/main.js
 //= slick.min.js
 //= svgxuse.js

@@ -60,7 +60,8 @@ block main
 							span Техподдержка
 							i.icon-arrow
 
-		.height-50
+			.height-50
+		
 		section.section-birthday
 			.container
 				.birthday-calendar
@@ -88,7 +89,6 @@ block main
 							
 							.birthday-now--list
 								ul.birthday-now--ul
-									//- li.birthday-list--items
 									li
 										span 30 августа
 										| Колесников Василий Андреевич
@@ -110,13 +110,21 @@ block main
 									li
 										span 1 сентября
 										| Колесников Василий Андреевич
-
-
-
 
 					.calendar-main.col-ds-6
 						.heading-title
 							h3 Календарь событий
+						.calendar-version1
+							#head-calendar
+								#mounth-now
+								.mounth-arrow
+									span#prev-mounth
+									span#next-mounth
+							| <table id="calendar2" class="calendar-month">
+							| 	<thead>
+							| 		<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+							| 	<tbody>
+							| </table>
 				
 		section.section-sistems
 			.container
@@ -275,12 +283,6 @@ block main
 								a(href="#").document-load
 									img(src="img/icon/document-download.svg", alt="Load Icon")
 									| Скачать PDF 0.1 mb
-
-
-		//- .container
-		//- 	h1 12345
-
-		//- 	.box-edit Text preview
 
 		//- 	+iconSvg('34', '32', '0 0 34 32', 'icon-star')
 		.height-50
