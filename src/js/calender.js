@@ -1,13 +1,19 @@
 var dataCalendar = [{
-        'date-day': '2020,9,7',
-        'date-time': '12:25',
-        'date-info': ' Курсы по мод 1',
+        'date-day': '2020,9,17',
+        'date-info': [
+            ['18: 25', 'Курсы по мод 1'],
+            ['18: 30', 'Курсы по мод 2'],
+            ['18: 35', 'Курсы по мод 3'],
+        ]
     },
     {
-        'date-day': '2020-9-12',
-        'date-time': '15:25',
-        'date-info': ' Курсы по мод 2',
-    }
+        'date-day': '2020,9,3',
+        'date-info': [
+            ['12: 25', 'Курсы по мод 1'],
+            ['12: 30', 'Курсы по мод 2'],
+            ['12: 35', 'Курсы по мод 3'],
+        ]
+    },
 ];
 // console.log(dataCalendar[0]['date-day'])
 
@@ -17,8 +23,8 @@ function Calendar2(id, year, month) {
         DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
         DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
         calendar = '<tr>',
-        month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-    findDays = "",
+        month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+        findDays = "",
         massDays = "",
         nowDay = new Date();
 
@@ -60,58 +66,57 @@ function Calendar2(id, year, month) {
         // console.log(new Date('2020,9,14'))
         // console.log(new Date(dataCalendar['date-day']))
     });
-    var eventData = function() {
-        for (var i = 0; i < dataCalendar.length; i++) {
-            findDate(i);
-        }
 
-        function findDate(data) {
-            for (var i = 1; i < Dlast; i++) {
-                massDays = new Date(dataCalendar[data]['date-day']);
-                findDays = new Date(new Date().getFullYear(), new Date().getMonth(), i);
-                console.log(massDays)
-                console.log(findDays)
-                if (massDays - findDays == 0) {
-                    console.log(i)
-                        // console.log(massDays)
-                    return calendar += '<td><div class="scroll-456"><span class="day-default">' + i;
-                }
-            }
-        }
-    };
-    // eventData();
     if (DNfirst != 0) {
         for (var i = 1; i < DNfirst; i++) calendar += '<td>';
     } else {
         for (var i = 0; i < 6; i++) calendar += '<td>';
     }
     for (var i = 1; i <= Dlast; i++) {
+        var sliceOb = null,
+            timeDate,
+            infoDate;
         findDays = new Date(new Date().getFullYear(), new Date().getMonth(), i);
-        console.log(findDays.getDate())
+
 
         if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
-            calendar += '<td class="today"><span class="day-default">' + i;
-        }
-        // else if (){
-
-        // } 
-        else {
-
+            // calendar += '<td class="today"><span class="day-default">' + i;
             for (var j = 0; j < dataCalendar.length; j++) {
-                // findDate(i);
+                timeDate = dataCalendar[j]['date-time'];
+                infoDate = dataCalendar[j]['date-info'];
+                // console.log(dataCalendar[j]['date-info'][0][0])
+                for (var inc = 0; inc < dataCalendar[j]['date-info'][0].length; inc++) {
+                    console.log(dataCalendar[j]['date-info'][0][inc])
+                }
                 massDays = new Date(dataCalendar[j]['date-day']);
-                // findDays = new Date(new Date().getFullYear(), new Date().getMonth(), i);
-                console.log(massDays)
-                if (massDays - findDays == 0) {
-                    calendar += '<td><div class="sdsdf"></div><span class="day-default">' + i;
+                if (massDays.getTime() == findDays.getTime() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+                    sliceOb = true;
                 }
             }
 
-            // if (massDays - findDays == 0){
+            if (sliceOb) {
+                calendar += '<td class="today"><div class="date-wrapper">' + timeDate + '<br>' + infoDate + '</div><span class="day-default">' + i;
+            } else {
+                calendar += '<td class="today"><span class="day-default">' + i;
+            }
+        } else {
 
-            // }
-            calendar += '<td><span class="day-default">' + i;
+            for (var j = 0; j < dataCalendar.length; j++) {
+                timeDate = dataCalendar[j]['date-time'];
+                infoDate = dataCalendar[j]['date-info'];
+                massDays = new Date(dataCalendar[j]['date-day']);
+                if (massDays.getTime() == findDays.getTime() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+                    sliceOb = true;
+                }
+            }
 
+            if (sliceOb) {
+                calendar += '<td><div class="date-wrapper"><ul><li>' + timeDate + infoDate + '</div><span class="day-default">' + i;
+            } else {
+                calendar += '<td><span class="day-default">' + i;
+            }
+
+            // console.log(i)
             // if (dataCalendar.length) {
             //     for (var j = 0; j < dataCalendar.length; j++) {
             //         // findDate(i);
