@@ -1,4 +1,15 @@
+@media (max-width: 1366px)
+  .top-menu li:not(:last-child)
+    margin-right 20px
+  .heading-title h2, 
+  .heading-title h3
+    font-size 28px
 @media (max-width: 1199px)
+  .personal-kabinet
+    max-width 90%
+  .menu-kabinet--list
+    a
+      padding 11px 10px 12px
   .top-menu li:not(:last-child)
     margin-right 20px
   .admin-dropdown
@@ -50,7 +61,43 @@
   .section--mass-media
     padding-bottom 10px
 
+@media (max-width: 1024px)
+  .training-block--default .training-block--content .training-block--list li a
+    padding-left 30px
+  .dropdown-training
+    width 385px
+    left 20px
+  .calendar-even--month
+    overflow-y auto
+    table
+      min-width 700px
+  .calendar-even--month table tbody tr td span,
+  .calendar-even--week table tbody tr td span
+    width calc(100% + 1px)
+    min-width calc(100% + 1px)
+  .personal-kabinet--content,
+  .head-kabinet--message
+    padding-right 20px
+  .personal-kabinet
+    padding-left 20px
+    tt(0, 0)
+
 @media (max-width: 991px)
+  .profile-form .select-form--profile
+    max-width 280px
+  .user-application
+    margin-left 40px
+  .head-kabinet--message-info p
+    br
+      display none
+  .menu-kabinet
+    background #eceeef
+    &:before
+      display none
+  .menu-kabinet
+    overflow-x: scroll
+    overflow-y: hidden
+    white-space: nowrap
   .footer-list a
     font-size 14px
   .copy-footer
@@ -176,7 +223,90 @@
   .footer .container
     background-position: right 47px bottom 70px
 
+@media (max-width: 940px)
+  .subordinate-people--table table tr td
+    padding-left 20px
+  .subordinate-people--table
+    margin-left 30px
+  .dropdown-training
+    width 96%
+    left 5px
+  .file-list--wrapper
+    .file-list--items
+      width 33.3%
+  .vacation-schedule--head .download-file--wrap, 
+  .vacation-schedule--head .toyear-calendar, 
+  .vacation-schedule--head .upload-wrap,
+  .add-order--wrap
+    margin-bottom 20px
+  .vacation-schedule--checbox
+    padding 0
+
+@media (max-width: 854px)
+  .menu-kabinet--list
+    display block
+    white-space: nowrap
+    li
+      display inline-block
+
+  .table-phone--wrapper
+    overflow-y auto
+    .table-default
+      min-width 700px
+  .profile-form
+    flex-wrap: wrap
+    input
+      margin-left 0
+      max-width 100%
+  .profile-form .select-form--profile
+    max-width 100%
+    margin-bottom 14px
+  .user-application
+    margin-left 0
+    padding-left 20px
+  .task-default--wrapper,
+  .administrator--wrapper .row
+    margin-left -10px
+    margin-right -10px
+    .col-md-6
+      width 100%
+      padding 0 10px
+
 @media (max-width: 767px)
+
+  .vacation-schedule--checbox .checkbox-small
+    margin-bottom 20px
+  .vacation-schedule--checbox
+    flex-wrap wrap
+  .training-main .col-md-6
+    margin-bottom 25px
+  .training-main .col-md-6
+    width 50%
+  .menu-kabinet
+    padding 15px
+  .birthday-now--wrapper
+    display block
+  .birthday-now--people
+    .row
+      .col-md-6
+        width 50%
+      .birthday-now--item
+        margin-bottom 20px
+  .wage-wrapper .form-default input
+    min-width auto
+  .table-application--wrapper
+    overflow-y auto
+    max-width 263px
+    .table-application
+      min-width 400px
+  .head-kabinet--name
+    padding-top: 14px
+    padding-bottom 14px
+    display flex
+    align-items center
+    min-width: auto
+    width: 222px
+    min-height: 86px
   .top-menu
     z-index 10
   .section-job-group
@@ -190,13 +320,91 @@
     width 100%
     height auto
 
+@media (max-width: 720px)
+  .subordinate-people--main
+    display block
+  .subordinate-people--img
+    margin-bottom 20px
+  .subordinate-people--table
+    width 100%
+    margin-left 0
+
+@media (max-width: 700px)
+  .training-block--default .training-block--content .training-block--list li a,
+  .training-block--default .training-block--content ul
+    padding-left 30px
+  .training-block--default .training-block--foot
+    padding 23px 30px 0
+
+@media (max-width: 660px)
+  .file-list--wrapper
+    .file-list--items
+      width 50%
+  .head-kabinet--message, .personal-kabinet--content
+    padding-right 0
+  .personal-kabinet--content
+    padding-left: 15px
+    padding-right: 15px
+  .head-kabinet--name
+    padding-left 15px
+  .personal-kabinet
+    padding-left 0px
+    padding-right 0px
+  .head-kabinet--message
+    display block
+    padding 13px 24px
+  .head-kabinet--message-info
+    padding 0
+    margin-bottom 8px
+
+@media (max-width: 640px)
+  .training-block--default .training-block--heading
+    padding-left 20px
+  .training-block--default .training-block--content .training-block--list li a, .training-block--default .training-block--content ul
+    padding-left 20px
+  .personal-kabinet
+    width: calc(100vw - 76px)
+    max-width: 100%
+  .link-more--big
+    margin-top 0
+    a
+      font-size 20px
+  .info-dropdown
+    margin-bottom 20px
+  .administrator--wrapper .row .col-md-6, .task-default--wrapper .col-md-6
+    width 50%
+  .user-application
+    padding-left 0
+  .user-profile--wrapper
+    display block
+  .user-profile
+    margin 0 auto 20px
+  .table-application--wrapper
+    max-width 100%
+
+@media (max-width: 639px)
+  .training-main .col-md-6
+    width 100%
+  .training-block--default
+    max-width 100%
+
 @media (max-width: 600px)
+  .default-text p
+    font-size 15px
+    margin-bottom 12px
+  .head-kabinet--message
+    display none
   .height-50
     display none
   .section--mass-media
     padding-bottom 30px
   
 @media (max-width: 540px)
+  .subordinate-people--table
+    overflow-y auto
+    padding-bottom 10px
+    table
+      min-width 600px
   .section-sistems
     padding-bottom 48px
   .section-job-group
@@ -242,7 +450,31 @@
   .footer-list li:not(:last-child)
     margin-bottom 3px
 
+@media (max-width: 539px)
+  .administrator--wrapper .row .col-md-6, .task-default--wrapper .col-md-6
+    width 100%
+
 @media (max-width: 480px)
+  .default-button
+    .button-big, .button-big--gray, .button-big--red
+      padding 14px
+      min-width 120px
+  .file-list--wrapper
+    .file-list--items
+      width 100%
+  .personal-kabinet
+    width 100%
+  .head-kabinet--name
+    min-height: 50px
+    padding 5px 0
+    padding-left 75px
+    width 100%
+  .close-perscab
+    width 50px
+    height 50px
+    top 0
+    left 0
+    padding 13px
   .navigate-links--wrapper .col-ds-3,
   .job-group .col-ds-3
     width 100%
@@ -250,3 +482,7 @@
     margin-right 14px
   .admin-dropdown
     font-size 0
+
+@media (max-width: 375px)
+  .calendar-tab--list li
+    min-width 115px

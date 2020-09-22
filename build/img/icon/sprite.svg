@@ -102,4 +102,15 @@
 		<path d="M22 1L1 22" stroke="white" stroke-width="2"/>
 	</symbol>
 
+	<symbol id="icon-awards">
+		<!-- width="16" height="14" viewBox="0 0 16 14" -->
+		<path d="M1 8.05714H14L10.9667 4.71429L14 1H1V14"/>
+	</symbol>
+	
+	<symbol id="icon-load">
+		<!-- width="12" height="14" viewBox="0 0 12 14" -->
+		<path d="M1 12.5V1H6L10.5 5.5V12.5H1Z" stroke-width="1.2"/>
+		<path d="M6 1V5.5H10.5" stroke-width="1.2"/>
+	</symbol>
+
 </svg>

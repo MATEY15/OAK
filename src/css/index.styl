@@ -30,13 +30,25 @@ body
 	position fixed
 	top 0
 	left 0
-	z-index 11
-	background cBlack
+	z-index 100
+	background rgba(0, 0, 0, .3)
+	opacity 0
+	visibility hidden
+	trn(.18s)
+	&.is-show
+		opacity 1
+		visibility visible
 
 .align-right
 	float right
 .align-left
 	float left
+
+button
+	cursor pointer
+
+strong
+	font-family fb
 
 h1, h2, h3, h4, h5, h6
 	font-family: fb
@@ -68,7 +80,31 @@ h6
 .height-50
 	height 50px
 
+input
+	-webkit-box-flex 1
+	-ms-flex 1
+	flex 1
+	border 3px solid #eceeef
+	min-height 43px
+	padding 10px 20px
+	font-size 14px
+	font-family fr
+	color #999999
+	&::-webkit-input-placeholder
+		color #999
+		font-size 14px
+	&::-moz-placeholder
+		color #999
+		font-size 14px
+	&:-ms-input-placeholder
+		color #999
+		font-size 14px
+	&:-moz-placeholder
+		color #999
+		font-size 14px
+
 .heading-title
+	&.heading-small,
 	&.title-white
 		h2, h3
 			color #fff
@@ -81,6 +117,16 @@ h6
 		font-family fb
 		font-size 30px
 		color #1D428A
+	&.heading-small
+		h2, h3
+			font-size 24px
+			line-height: 1.4
+			color #000
+		.link-title
+			a
+				color: #1D428A
+				&:before
+					background #1D428A
 	.link-title
 			a
 				color: #1D428A
@@ -120,3 +166,130 @@ h6
 	width: 33.333%
 .col-ds-3
 	width 25%
+
+
+
+// Select style
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	&:before
+		position relative
+		display inline-block
+		content ''
+		right 0
+		top 0
+		margin-top 14px
+		margin-left 5px
+		min-width 8px
+		min-height 8px
+		border-width 0 1px 1px 0
+		border-style solid
+		border-color #999999
+		-webkit-transform rotateZ(45deg)
+		transform rotateZ(45deg)
+		-webkit-transition all .15s ease-out
+		transition all .15s ease-out
+	b
+		display none
+
+.select2.select2-container
+	width: 100% !important
+
+.select2.select2-container .select2-selection
+	border: 0 !important
+	background: #ECEEEF
+	border-radius: 0px
+	height: 43px
+	// margin-bottom: 15px
+	outline: none
+	transition: all .15s ease-in-out
+
+.select2.select2-container .select2-selection .select2-selection__rendered
+	color: #999999
+	line-height: 1.4
+	padding 12px 20px
+	padding-right: 40px
+	height 100%
+	font-size 14px
+	font-family fr
+
+.select2.select2-container .select2-selection .select2-selection__arrow
+	background: #ECEEEF
+	height: 41px
+	width: 33px
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single
+	background: #ECEEEF
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single .select2-selection__arrow
+	-webkit-border-radius: 0 3px 0 0
+	-moz-border-radius: 0 3px 0 0
+	border-radius: 0 3px 0 0
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--multiple
+	border: 1px solid #34495e
+
+.select2.select2-container.select2-container--focus .select2-selection
+	border: 1px solid #34495e
+
+.select2.select2-container .select2-selection--multiple
+	height: auto
+	min-height: 34px
+
+.select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field
+	margin-top: 0
+	height: 32px
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice
+	background-color: #f8f8f8
+	border: 1px solid #ccc
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+	margin: 4px 4px 0 0
+	padding: 0 6px 0 22px
+	height: 24px
+	line-height: 24px
+	font-size: 12px
+	position: relative
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove
+	position: absolute
+	top: 0
+	left: 0
+	height: 22px
+	width: 22px
+	margin: 0
+	text-align: center
+	color: #e74c3c
+	font-weight: bold
+	font-size: 16px
+
+.select2-container .select2-dropdown
+	background: transparent
+	border: none
+
+.select2-container .select2-dropdown .select2-search
+	padding: 0
+
+.select2-container .select2-dropdown .select2-search input
+	outline: none
+	border: 1px solid #34495e
+	border-bottom: none
+	padding: 4px 6px
+
+.select2-container .select2-dropdown .select2-results
+	padding: 0
+
+.select2-container .select2-dropdown .select2-results ul
+	background: #fff
+	border: 1px solid #ECEEEF
+	border-top 1px solid #cdcdcd
+	li
+		padding 12px 20px
+		font-size 14px
+		font-family fr
+		color: #999999
+
+.select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected]
+	background-color: #ECEEEF

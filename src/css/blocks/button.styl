@@ -1,19 +1,42 @@
 .button
 	display inline-block
-	min-width 230px
-	height 48px
-	line-height 46px
 	text-align center
-	c cWhite
-	font-family fPoppinsSemiBold
-	font-size 15px
+	c #fff
+	font-family fr
+	font-size 13px
+	line-height 1.45
 	text-decoration none
-	background: cPink
-	border-radius 4px
+	background: #1D428A
+	padding 4px 12px
 	cursor pointer
 	transition all .25s ease-out
 	&:hover
-		background: #f85f72
-	@media screen and (max-width: 600px)
-		font-size 12px
-		
+		background: #1D428A
+
+.button-big,
+.button-big--gray,
+.button-big--red
+	display inline-block
+	min-width 147px
+	text-align center
+	c #fff
+	font-family fr
+	font-size 14px
+	line-height 1.45
+	text-decoration none
+	background: #1D428A
+	padding 20px
+	cursor pointer
+	transition all .25s ease-out
+	&:hover
+		background: #5B6770
+
+.button-big--red
+	background: #DA291C
+	&:hover
+		background: #1D428A
+
+.button-big--gray
+	background #5B6770
+	&:hover
+		background: #1D428A

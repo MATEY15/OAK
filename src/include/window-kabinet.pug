@@ -1,0 +1,61 @@
+.personal-kabinet#personal-kabinet
+  span#close-perscab.close-perscab
+    +iconSvg('23', '23', '0 0 23 23', 'icon-close')
+  
+  .personal-kabinet--wrapper
+  
+    .personal-kabinet--container
+      .head-kabinet
+        .head-kabinet--name
+          h2 Ярослав Зуев
+        .head-kabinet--message
+          .head-kabinet--message-info
+            h4 Экологичное производство
+            p Предлагаем вам записаться на лекцию по охране окружающей #[br] среды в четверг в 18:00! С собой необходимо взять паспорт.
+          //- .head-kabinet--info-button
+          a(href="#").button Подробнее
+      
+      nav.menu-kabinet
+        ul.menu-kabinet--list
+          li.active
+            a(href="#") Профиль
+          li
+            a(href="#") Телефоны
+          li
+            a(href="#") Заработная плата
+          li
+            a(href="#") Дни рождения
+          li
+            a(href="#") Обучение
+          li
+            a(href="#") График отпусков
+          li
+            a(href="#") Квартальные планы
+      
+      .personal-kabinet--content
+
+        include kabinet-include/profil
+
+        //- include kabinet-include/phone
+
+        //- include kabinet-include/wage
+
+        //- include kabinet-include/wage-v2
+
+        //- include kabinet-include/birthday
+
+        //- include kabinet-include/training
+
+        //- include kabinet-include/vacation-schedule
+
+        //- include kabinet-include/vacation-registration
+
+        //- include kabinet-include/vacation-registration-v2
+
+        //- include kabinet-include/create-task
+
+        //- include kabinet-include/subordinate
+
+        //- include kabinet-include/subordinate-people
+
+      

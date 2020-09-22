@@ -1,0 +1,1349 @@
+.personal-kabinet
+  // position fixed
+  position absolute
+  right 0
+  top 0
+  padding-left 30px
+  width 1000px
+  min-height 100vh
+  height 100%
+  // height 100vh
+  background  #ffffff
+  opacity 0
+  visibility hidden
+  z-index 1000
+  trn(.18s)
+  tt(100px, 0)
+  &.is-show
+    opacity 1
+    visibility visible
+    tt(0px, 0)
+  .personal-kabinet--wrapper
+    overflow hidden
+    height 100%
+
+.close-perscab
+  position absolute
+  left -56px
+  top 100px
+  display inline-block
+  width 56px
+  height 56px
+  background #1D428A
+  padding 17px
+  cursor pointer
+
+.personal-kabinet--container
+  max-width 877px
+
+// Header kabinet
+
+.head-kabinet
+  display flex
+.head-kabinet--name
+  padding-top 25px
+  min-width 322px
+  min-height: 86px
+  h2, h3, h4
+    font-size 30px
+    color: #000000
+.head-kabinet--message
+  position relative
+  display flex
+  align-items center
+  flex 1
+  background #FFD5D2
+  &:before
+    position absolute
+    width 2000px
+    height 100%
+    background #FFD5D2
+    content ''
+    z-index -1
+  .button
+    margin-left auto
+
+.head-kabinet--message-info
+  padding 13px 24px
+  h4
+    font-size 18px
+    color: #5B6770
+    margin-bottom 5px
+    line-height 1.17
+  p
+    font-size 14px
+    color: #5B6770
+    line-height 1.17
+
+// Menu kabinet
+
+.menu-kabinet
+  margin-bottom 32px
+  position relative
+  padding 21px 21px 23px
+  &:before
+    position absolute
+    top 0
+    left 0
+    width 2000px
+    height 100%
+    background #ECEEEF
+    content ''
+    z-index -1
+
+.menu-kabinet--list
+  display flex
+  li
+    trn(.15s)
+    &:hover,
+    &.active
+      background #1D428A
+      a
+        color #fff
+  a
+    display inline-block
+    padding 11px 15px 12px
+    font-family fr
+    font-size 13px
+    line-height 1.45
+    color #5B6770
+    text-decoration none
+    trn(.15s)
+
+// User kabinet
+
+.user-profile--wrapper
+  display flex
+
+.user-profile
+  max-width 265px
+  min-width 265px
+
+.user-application
+  width 100%
+  margin-left 60px
+
+  .my-application
+    margin-bottom 36px
+    .heading-title
+      margin-bottom 28px
+
+.user-img
+  position relative
+  font-size 0
+  max-height: 338px
+  overflow hidden
+  img
+    width 100%
+    height 100%
+    object-fit: cover
+    object-position: 0 center
+
+.user-status
+  display flex
+  min-height: 40px
+  .cooperator
+    width 50%
+    padding 13px 18px 12px
+    background #1D428A
+    span
+      display block
+      font-size 14px
+      color: #FFFFFF
+  .status-live
+    width 50%
+    padding 13px 18px 12px
+    &.un-active
+      span
+        color #DA291C
+        &:before
+          background #DA291C
+    span
+      position relative
+      display block
+      font-size 14px
+      color #58BE75
+      &:before
+        display inline-block
+        position relative
+        top 0
+        left 0
+        width 12px
+        height 12px
+        background #58BE75
+        content ''
+        margin-right 6px
+        brr(50%)
+        trn(.25s)
+
+.status-checked
+  margin-top 12px
+  p
+    font-size 12px
+    color: #5B6770
+
+.awards-wrapper
+  display flex
+  flex-wrap: wrap
+  // justify-content space-between
+  margin -4px
+  .awards-items
+    width 30px
+    height 30px
+    display flex
+    padding 8px
+    brr(50%)
+    border: 1px solid #CECECE
+    margin 4px
+    margin-bottom 8px
+    trn(.15s)
+    cursor pointer
+
+    &:hover
+      background #112E65
+      border: 1px solid #112E65
+      .icon-awards
+        stroke #ffffff
+
+.my-awards
+  margin-top 27px
+  margin-bottom 34px
+  h4
+    font-size: 24px
+    color: #112E65
+    margin-bottom 20px
+
+.icon-awards
+  stroke #CECECE
+  fill transparent
+  trn(.15s)
+
+
+.my-task--head
+  min-height: 78px
+  background: #112E65
+  padding 22px 20px
+  h4
+    color #fff
+    font-size 24px
+    line-height 1.4
+
+.my-task--main
+  min-height: 234px
+  padding 20px
+  background #1D428A
+.my-task--items
+  display flex
+  margin-bottom 14px
+  p
+    line-height 1.6
+  p, span
+    display block
+    font-size: 18px
+    color: #FFFFFF
+  .num-counter
+    display flex
+    margin-left auto
+    span
+      min-width 30px
+      min-height 30px
+      text-align center
+      padding 5px 0
+    .counter-square
+      background: #112E65
+      margin-left 10px
+
+// Table application
+
+.table-application
+  width 100%
+  border-spacing: 1px 1px
+  border-collapse: collapse
+  thead
+    tr, tr th
+      background: #1D428A
+      font-family fr
+      font-weight inherit
+      color: #FFFFFF
+      font-size 14px
+    
+    tr th
+      height 43px
+      text-align left
+      padding 10px
+  
+  tbody
+    tr
+      td
+        height 43px
+        text-align left
+        font-size 14px
+        color: #5B6770
+        padding 10px
+      &:nth-child(even)
+        td
+          background: #ECEEEF
+
+.burger-table
+  display block
+  width 12px
+  span
+    display block
+    height 1px
+    background #5B6770
+    width 100%
+    margin-bottom 3px
+    &:last-child
+      margin-bottom 0
+
+.info-dropdown--item
+  position relative
+  &:hover
+    .info-dropdown
+      border: 12px solid #1D428A
+    
+    .dropdown-hidden
+      opacity 1
+      visibility visible
+      tt(0 , 0px)
+
+  .dropdown-hidden
+    position absolute
+    top 100%
+    margin-top -22px
+    right 0
+    z-index 10
+    trn(.15s)
+    opacity 0
+    visibility hidden
+    tt(0 , 20px)
+
+.dropdown-list
+  position relative
+  min-width 150px
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.18)
+  &:before
+    position absolute
+    content ''
+    width 22px
+    height 22px
+    background #fff
+    box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.04)
+    z-index: 0
+    top -8px
+    right 30px
+    transform: rotate(45deg)
+  li, li a
+    position relative
+    font-size 12px
+    color: #5B6770
+  li
+    background #fff
+    border-bottom 1px solid#eceeef
+    trn(.2s)
+    &:last-child
+      border-bottom 0
+    &:hover
+      background: #1D428A
+      a
+        color #fff
+    a
+      display inline-block
+      width 100%
+      min-height: 15px
+      text-decoration none
+      padding 15px 16px
+
+.info-dropdown
+  position: relative
+  display: flex
+  align-items: center
+  width: 100%
+  max-width 263px
+  min-height: 107px
+  border: 12px solid #eceeef
+  text-decoration: none
+  padding: 20px 23px 24px 20px
+  font-family: fb
+  font-size: 16px
+  margin-bottom 27px
+  color: #5B6770
+  trn(.2s)
+  .icon-arrow
+    margin-left auto
+  &:hover
+    border: 12px solid #1D428A
+    .icon-arrow
+      border-color #1D428A
+  
+  .counter
+    position: absolute
+    top: 0
+    right: 0
+    display: inline-block
+    min-width: 20px
+    height: 20px
+    background: #da291c
+    font-size: 16px
+    line-height 1
+    font-family: fr
+    color: #fff
+    text-align: center
+    font-style: normal
+    padding: 3px
+
+.task-default--wrapper
+  display flex
+
+  .col-sd-6
+    width 50%
+
+// Administrating
+
+.administrator--wrapper
+  margin-top 24px
+.administrator-heading
+  margin-bottom 15px
+
+.link-more--big
+  margin-top 25px
+  a
+    position relative
+    display inline-block
+    font-family fb
+    font-size 24px
+    line-height 1.17
+    color #000
+    text-decoration none
+    padding-bottom 4px
+    &:before
+      position absolute
+      display block
+      content ''
+      width 100%
+      height 1px
+      bottom 0px
+      left 0
+      background-image url(../img/icon/line-border.png)
+
+  .icon-arrow
+    min-width: 12px
+    min-height: 12px
+    border-width: 0 3px 3px 0
+    border-color #000000
+    margin-left 10px
+    margin-bottom 4px
+
+.profile-phone
+  .heading-title
+    margin-bottom 22px
+
+.profile-form--wrapper
+  margin-bottom 18px
+
+.profile-form
+  display flex
+  .select-form--profile
+    max-width 367px
+    width 100%
+  input
+    -webkit-box-flex 1
+    -ms-flex 1
+    flex 1
+    border 3px solid #eceeef
+    min-height 43px
+    max-width 367px
+    width 100%
+    padding 10px 25px
+    font-size 14px
+    font-family HeliosCond
+    color #999
+    margin-left 12px
+    &::-webkit-input-placeholder
+      color #999
+      font-size 14px
+    &::-moz-placeholder
+      color #999
+      font-size 14px
+    &:-ms-input-placeholder
+      color #999
+      font-size 14px
+    &:-moz-placeholder
+      color #999
+      font-size 14px
+
+  .btn-phonebook
+    display flex
+    align-items center
+    justify-content center
+    background #1D428A
+    color #fff
+    min-width 120px
+    min-height: 43px
+    margin-left 10px
+    font-size 16px
+    cursor pointer
+    svg
+      margin-right 15px
+      width 18px
+      height 18px
+
+// Select Style
+
+// Select in index file
+
+// Table default
+
+.table-default
+  border-collapse: collapse
+  width 100%
+  thead
+    tr
+      th
+        background #1d428a
+        font-family HeliosCond
+        font-weight inherit
+        color #fff
+        font-size 13px
+        line-height 1.17
+        height 43px
+        text-align left
+        padding 10px
+        padding-right 5px
+  tbody
+    tr
+      &:nth-child(even)
+        td
+          background: #ECEEEF
+      td
+        font-family HeliosCond
+        font-weight inherit
+        color #5B6770
+        font-size 13px
+        line-height 1.17
+        height 43px
+        text-align left
+        padding 13px 10px 16px
+        padding-right 5px
+        vertical-align: baseline
+
+// Form wage
+
+.wage-wrapper
+  .heading-title
+    margin-bottom 20px
+  .form-default
+    input
+      max-width 290px
+    .button
+      margin-left 10px
+
+.wage-content
+  margin-bottom 35px
+  p
+    font-size 16px
+    line-height 1.6
+    color: #000000
+
+.form-default
+  form
+    display flex
+  input
+    min-height 53px
+    min-width 290px
+    padding 15px 20px
+    font-size 16px
+  .button
+    min-height 53px
+    min-width 110px
+
+.login-to-sms
+  padding-left 24px
+  padding-top 10px
+  a
+    font-size 11px
+    color: #DA291C
+    text-decoration none
+    trn(.15s)
+    &:hover
+      text-decoration underline
+
+.file-list
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  text-decoration none
+  color: #5B6770
+  font-size: 14px
+  background: #ECEEEF
+  min-width: 197px
+  min-height: 197px
+  padding 10px
+  margin-bottom 30px
+  trn(.15s)
+  &:hover
+    background #1D428A
+    color #fff
+  span
+    display block
+    text-align center
+  img
+    display block
+    margin 0 auto 22px
+
+.birthday-kabinet
+  .heading-title
+    margin-bottom 20px
+  .birthday-now--ul li:nth-child(odd)
+    background: #ECEEEF
+
+
+// Training
+
+.training-wrapper
+  .heading-title
+    margin-bottom 22px
+
+.training-block--default
+  max-width: 390px
+  min-height: 229px
+  height 100%
+  background: #ECEEEF
+  padding 24px 0 30px
+  .training-block--heading
+    padding-left 30px
+    margin-bottom 22px
+    h4
+      color: #1D428A
+      font-size 18px
+  .training-block--content
+    .training-block--table
+      padding 0 15px
+    table
+      border-collapse: collapse
+      width 100%
+      tr
+        &:nth-child(even)
+          background #fff
+        td
+          width 50%
+          height 35px
+          font-size 13px
+          line-height 15px
+          color: #9A9A9A
+          padding 5px 14px
+          &:last-child
+            color #000
+    .training-block--list
+      padding-left 0
+      li
+        position relative
+        &:hover
+          .dropdown-training
+            opacity 1
+            visibility visible
+            tt(0, 0)
+      li a
+        font-size: 13px
+        color #000000
+        text-decoration none
+        padding 2px 0 1px
+        padding-left 50px
+        height 1px
+        border-left 9px solid transparent
+        trn(.15s)
+        &:hover
+          border-left 9px solid #DA291C
+          color #DA291C
+    ul
+      padding-left 50px
+      li
+        font-size: 13px
+        color #000000
+        &:not(:last-child)
+          margin-bottom 20px
+  
+  .training-block--foot
+    padding 23px 50px 0
+
+.dropdown-training
+  position absolute
+  top 100%
+  left 60px
+  margin-top 15px
+  background #fff
+  width 430px
+  padding 10px
+  box-shadow: 0 1px 4px rgba(0,0,0,.18)
+  z-index 100
+  opacity 0
+  visibility hidden
+  tt(0, 20px)
+  trn(.15s)
+  &:before
+    position absolute
+    content ''
+    width 22px
+    height 22px
+    background #fff
+    box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.04)
+    z-index: 0
+    top -8px
+    left 30px
+    transform: rotate(45deg)
+  table
+    position relative
+    border-collapse: collapse
+    width 100%
+    tr
+      &:nth-child(odd)
+        background #ECEEEF !important
+
+.training-main
+  max-width 810px
+  .col-md-6
+    margin-bottom 40px
+
+.icon-what
+  position relative
+  top 1px
+  margin-left 5px
+  cursor pointer
+  &:hover
+    .icon-what--content
+      opacity 1
+      visibility visible
+      tt(0, 0px)
+
+.icon-what--content
+  position absolute
+  bottom 100%
+  left 0
+  display block
+  padding 13px 15px 12px
+  font-size: 12px
+  line-height: 14px
+  width 135px
+  background #fff
+  margin-bottom 14px
+  margin-left -18px
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.18)
+  tt(0, -15px)
+  trn(.2s)
+  opacity 0
+  visibility hidden
+  &:before
+    position absolute
+    content ''
+    width 12px
+    height 12px
+    background #fff
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.04)
+    z-index: 0
+    bottom -6px
+    left 17px
+    transform: rotate(45deg)
+
+.navigate-kabinet
+  position relative
+  display flex
+  align-items center
+  // justify-content space-between
+  width 100%
+  min-height 107px
+  border 12px solid #ECEEEF
+  text-decoration none
+  padding 20px 23px 24px 20px
+  font-family fb
+  font-size 16px
+  c #5B6770
+  trn(.15s)
+  &:hover
+    border 12px solid #1D428A
+    .icon-arrow
+      border-color #1D428A
+  .icon-arrow
+    margin-left auto
+
+.message-red
+  min-height: 165px
+  background: #FFD5D2
+  padding 24px 15px 32px
+  h5
+    color: #5B6770
+    font-size 16px
+    line-height 1.4
+    margin-bottom 8px
+  p
+    color: #5B6770
+    font-size 13px
+    line-height 1.4
+    margin-bottom 15px
+
+// Calendar Kabinet
+
+.vacation-schedule--wrapper
+  .heading-title
+    margin-bottom 22px
+
+.vacation-schedule--head
+  display flex
+  flex-wrap wrap
+  .download-file--wrap,
+  .upload-wrap,
+  .toyear-calendar
+    margin-right 20px
+
+.toyear-calendar
+  flex 1
+  background: #ECEEEF
+  padding 20px 10px
+  display flex
+  max-width 292px
+  min-width 200px
+  min-height: 58px
+  p
+    color: #5B6770
+    font-size 14px
+    line-height 1.4
+
+.toyear-navigation
+  display flex
+  margin-left auto
+
+  .next-year,
+  .prev-year
+    cursor pointer
+    &:before
+      position relative
+      content ""
+      width 13px
+      height 12px
+      display inline-block
+      background-image url(../img/icon/arrow-calendar.svg)
+
+  .next-year
+    margin-left 11px
+    &:before
+      transform: rotateY(180deg)
+
+.upload-wrap
+  max-width 147px
+  position relative
+
+.MultiFile-list
+  position absolute
+  top 0
+  left 0
+  width 100%
+  font-size: 14px
+  color #000
+  background #fff
+  z-index 100
+
+div.MultiFile-label
+  border-bottom 2px dashed #000
+  padding 4px 20px 2px
+  padding-right 0
+  display flex
+  align-items center
+
+.MultiFile-title
+  font-size: 14px
+  line-height 1.4
+  color #000
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  max-width: 105px
+  display: inline-block
+
+.MultiFile-remove
+  position relative
+  top -1px
+  display inline-block
+  min-width 14px
+  height 14px
+  background red
+  margin-right 8px
+  brr(50%)
+  font-size 11px
+  color #fff
+  text-decoration none
+  text-align center
+  line-height 1.1
+
+.upload-label
+  border: 2px dashed #000000
+  min-height: 58px
+  display block
+  max-width 147px
+  padding 18px 20px
+  font-size: 14px
+  color #000
+  cursor pointer
+  user-select none
+  .icon-load
+    position relative
+    top 2px
+    fill transparent
+    stroke #000
+  .add-load
+    // opacity 0
+    // visibility hidden
+    // display none
+
+.MultiFile-wrap
+  position relative
+  input
+    width .1px
+    height .1px
+    opacity 0
+    overflow hidden
+    position absolute
+    z-index -1
+
+.download-file
+  position relative
+  display inline-block
+  max-width: 147px
+  min-width: 147px
+  width 100%
+  text-align center
+  min-height: 58px
+  background: #1D428A
+  color: #FFFFFF
+  font-size: 14px
+  text-decoration none
+  padding 19px 15px
+  trn(.2s)
+  .icon-load
+    position relative
+    top 2px
+    fill transparent
+    stroke #fff
+
+.add-order
+  position relative
+  display inline-block
+  max-width: 230px
+  width 100%
+  text-align center
+  min-height: 58px
+  background: #1D428A
+  color: #FFFFFF
+  font-size: 14px
+  text-decoration none
+  padding 12px 20px
+
+// Checkbox Wrapper
+
+.vacation-schedule--checbox
+  display flex
+  padding 20px 0
+  .checkbox-small:not(:last-child)
+    margin-right 30px
+
+.checkbox-small
+  display: block
+
+.checkbox-small:last-child
+  margin-bottom: 0
+
+.checkbox-small input
+  display: none
+  z-index: -1
+  opacity: 0
+
+.checkbox-small__text
+  position: relative
+  color: #fff
+  font-family: fr
+  font-size: 12px
+  line-height: 1.4
+  padding: 0 0 0 27px
+  cursor: pointer
+  display: inline-block
+  user-select: none
+  
+  span
+    display inline-block
+    min-height: 22px
+    background: #5B6770
+    color #fff
+    padding 3px 6px 2px
+    text-decoration line-through
+    trn(.2s)
+
+.checkbox-small__text:before
+  content: ''
+  position: absolute
+  top: 0px
+  left: 0
+  width: 22px
+  height: 22px
+  background: #5B6770
+.checkbox-small
+  &.colr-gray
+    .checkbox-small__text span,
+    .checkbox-small__text:before
+      background #5B6770
+  &.colr-blue
+    .checkbox-small__text span,
+    .checkbox-small__text:before
+      background #1D428A
+  &.colr-red
+    .checkbox-small__text span,
+    .checkbox-small__text:before
+      background #DA291C
+
+.checkbox-small input:checked + .checkbox-small__text:before
+  background-image url(../img/icon/checbox-icon.png)
+  background-repeat: no-repeat
+  background-position: 5px 5px
+
+.checkbox-small input:checked + .checkbox-small__text span
+  text-decoration none
+
+// Table 
+
+.calendar-even--wrapper
+  margin-top 14px
+
+.calendar-tab--list
+  display flex
+  li
+    display inline-block
+    font-size: 16px
+    color: #5B6770
+    min-height: 37px
+    min-width: 174px
+    background: #ECEEEF
+    padding 10px 10px 8px
+    text-align center
+    text-decoration none
+    cursor pointer
+    user-select none
+    trn(.15s)
+    // a
+    //   display inline-block
+    //   font-size: 16px
+    //   color: #5B6770
+    //   min-height: 37px
+    //   min-width: 174px
+    //   background: #ECEEEF
+    //   padding 10px 10px 8px
+    //   text-align center
+    //   text-decoration none
+    //   trn(.15s)
+    &.active,
+    &:hover
+      // a
+      background: #1D428A
+      color #fff
+
+.available-day
+  p
+    display flex
+    align-items center
+    font-size 12px
+    line-height 14px
+    color: #000000
+    span
+      font-size: 33px
+      line-height: 38px
+      color: #000000
+      margin-right 10px
+
+.calendar-even--week
+  table
+    width 100%
+    border-collapse: collapse
+    overflow hidden
+    thead
+      tr
+        th
+          font-family fr
+          font-size 14px
+          font-weight normal
+          color #fff
+          height 26px
+          width 22px
+          background: #1D428A
+          border-right 1px solid #1d428a
+          padding 0 10px
+          text-align left
+          &.curent-day
+            background: #DA291C
+    tbody
+      tr
+        border-bottom 1px solid #ECEEEF
+        td
+          position relative
+          height: 92px
+          padding 8px 10px
+          width calc(100% / 7)
+          width 125px
+          vertical-align bottom
+          text-align left
+          font-size: 14px
+          color: #5B6770
+          border-right 1px solid #ECEEEF
+          &.curent-day
+            color #DA291C
+            font-family fb
+          &:first-child
+            border-left 1px solid #ECEEEF
+          span
+            position absolute
+            left 0
+            display inline-block
+            height 20px
+            width 100%
+            min-width 125px
+            &.top
+              top 18px
+            &.botoom
+              top 38px
+          .bg-gray
+            background #5B6770
+          .bg-blue
+            background #1D428A
+          .bg-red
+            background #DA291C
+
+.calendar-even--month
+  table
+    width 100%
+    border-collapse: collapse
+    thead
+      tr
+        th
+          font-family fr
+          font-size 11px
+          font-weight normal
+          color #fff
+          height 26px
+          width 22px
+          background: #1D428A
+          border-right 1px solid #1d428a
+          &.curent-day
+            background: #DA291C
+    tbody
+      tr
+        border 1px solid #ECEEEF
+        td
+          position relative
+          font-size 11px
+          color: #5B6770
+          height: 32px
+          width 22px
+          border-right 1px solid #ECEEEF
+          padding 0
+          &:first-child
+            width 194px
+            border-left 1px solid #ECEEEF
+            padding 10px
+          span
+            position absolute
+            left 0
+            display inline-block
+            height 17px
+            width 22px
+            &.top
+              top -1px
+            &.botoom
+              top 16px
+          .bg-gray
+            background #5B6770
+          .bg-blue
+            background #1D428A
+          .bg-red
+            background #DA291C
+
+// Vacation registration
+
+.vacation-registration
+  .heading-title
+    margin-bottom 18px
+  
+  .error-message
+    margin-bottom 30px
+
+.default-text
+  margin-bottom 20px
+  p
+    font-size: 16px
+    line-height 1.4
+    color #000
+    margin-bottom 18px
+
+.default-message
+  padding 23px 23px 26px
+  background: #ECEEEF
+  &.error-message
+    background: #FFD5D2
+  h5
+    font-size 18px
+    line-height 1.4
+    color: #5B6770
+    margin-bottom 4px
+  p
+    font-size 14px
+    line-height 1.4
+    color: #5B6770
+
+.default-button
+  margin-top 35px
+  .button-big
+    margin-right 20px
+
+.vacation-form
+  .select-search
+    background #000
+    & + .select2.select2-container .select2-selection
+      background-image url(../img/icon/search-button--blue.svg)
+      background-repeat no-repeat
+      background-position right 15px top 14px
+      padding-right 40px
+  input
+    width 100%
+    min-height: 53px
+  .col-md-12
+    font-size 0
+  textarea
+    width 100%
+    min-height: 115px
+    padding 15px 20px
+    font-size: 14px
+    line-height 1.4
+    background: #FFFFFF
+    border: 3px solid #ECEEEF
+    resize: none
+    &::-webkit-input-placeholder
+      color #999
+      font-size 14px
+    &::-moz-placeholder
+      color #999
+      font-size 14px
+    &:-ms-input-placeholder
+      color #999
+      font-size 14px
+    &:-moz-placeholder
+      color #999
+      font-size 14px
+  .col-md-4
+    margin-top 25px
+  .select2.select2-container .select2-selection
+    border: 3px solid #eceeef !important
+    background: transparent
+    height 53px
+  .select2.select2-container .select2-selection .select2-selection__rendered
+    padding 14px 20px
+  .select2.select2-container .select2-selection .select2-selection__arrow
+    background transparent
+  .select2-container--default .select2-selection--single .select2-selection__arrow:before
+    margin-top 19px
+  .select2.select2-container .select2-selection--multiple .select2-selection__choice
+    margin-top 10px
+    margin-left 5px
+
+.vacation-form--offset
+  .col-md-4,
+  .col-md-6,
+  .col-md-12,
+  .col-md-3
+    margin-top 0
+    margin-bottom 20px
+
+.create-task--main
+  .button-big--red
+    margin-top 10px
+
+.create-task
+  .heading-title
+    margin-bottom 32px
+
+.icon-plus
+  position relative
+  display inline-block
+  width 10px
+  height 10px
+  margin-right 3px
+  &:before,
+  &:after
+    position absolute
+    display block
+    content ''
+    top 50%
+    left 50%
+    tt(-50%, -50%)
+    background #fff
+  &:before
+    width 10px
+    height 1px
+  &:after
+    width 1px
+    height 10px
+
+.subordinate
+  .heading-title
+    margin-bottom 22px
+
+.subordinate-people
+  .heading-title
+    margin-bottom 18px
+
+.subordinate-people--main
+  display flex
+.subordinate-people--img
+  max-width 220px
+  min-width 220px
+  height 316px
+  overflow hidden
+  img
+    max-width 100%
+    max-height: 100%
+    object-fit: cover
+
+
+.subordinate-people--table
+  width 100%
+  margin-left 50px
+  table
+    width 100%
+    border-collapse: collapse
+    tr
+      &:nth-child(odd)
+        background: #ECEEEF
+      td
+        height 32px
+        font-family fl
+        font-size: 14px
+        line-height 1.4
+        color: #A5A5A5
+        padding-left 60px
+        &:last-child
+          font-family fb
+          color #000
+
+.subordinate-button
+  margin-bottom 33px
+  a
+    font-size 14px
+    padding 9px 20px
+
+  .icon-arrow-btn
+    display: inline-block
+    width: 8px
+    height: 8px
+    border-width: 0 0 1px 1px
+    border-style: solid
+    border-color: #ECEEEF
+    margin 0 6px 1px 0
+    transform: rotateZ(45deg)
+    trn(.15s)
+
+.pane
+  display none

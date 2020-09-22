@@ -1,0 +1,39 @@
+.vacation-registration
+
+  .heading-title.heading-small
+    h3 Оформление отпуска
+  
+  .default-message.error-message
+    h5 Внимание
+    p Заявка не может быть направлена на согласование #[strong менее чем за 10 календарных дней] до запланированной даты начала отпуска. Пожалуйста, выберите в заявке другие даты или оформите заявку на отпуск без сохранения заработной платы.
+  
+  .vacation-form
+    form(action="")
+      .row
+        .col-md-4.col-sm-6
+          select.js-select2
+            option(value="") Вид отпуска
+            option(value="") Вид отпуска 1
+            option(value="") Вид отпуска 2
+            option(value="") Вид отпуска 3
+        .col-md-4.col-sm-6
+          select.js-select2
+            option(value="") Дата с
+            option(value="") Дата с 1
+            option(value="") Дата с 2
+            option(value="") Дата с 3
+        .col-md-4.col-sm-6
+          select.js-select2
+            option(value="") Дата по
+            option(value="") Дата по 1
+            option(value="") Дата по 2
+            option(value="") Дата по 3
+        .col-md-4.col-sm-6
+          input(type="text" placeholder="Кол-во дней")
+        .col-md-4.col-sm-6
+          input(type="text" placeholder="В период отпуска меня замещает")
+        .col-md-4.col-sm-6
+          input(type="text" placeholder="Согласующий руководитель")
+
+  .default-button
+    button.button.button-big Сформировать шаблон

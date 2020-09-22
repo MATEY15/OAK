@@ -1,0 +1,64 @@
+.create-task
+  .heading-title.heading-small
+    h3 Создание задачи
+  
+  .create-task--main
+    .vacation-form.vacation-form--offset
+      form(action="")
+        .row
+          .col-md-6.col-sm-6
+            input(type="text" placeholder="Проект / программа")
+          .col-md-6.col-sm-6
+            input(type="text" placeholder="Основание для проведения работ")
+          .col-md-6.col-sm-6
+            select.js-select2-multi.select-search(multiple='multiple')
+              option Ответственный исполнитель
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+          .col-md-6.col-sm-6
+            select.js-select2-multi.select-search(multiple='multiple')
+              option Ответственный исполнитель
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+              option Ярослав Зуев
+              option Колесников Василий Андреевич
+              option Константинопольский Григорий Михайлович
+          .col-md-12
+            textarea(placeholder="Содержание")
+          .col-md-4.col-sm-6
+            select.js-select2
+              option(value="") Дата с
+              option(value="") Дата с 1
+              option(value="") Дата с 2
+              option(value="") Дата с 3
+          .col-md-4.col-sm-6
+            select.js-select2
+              option(value="") Дата по
+              option(value="") Дата по 1
+              option(value="") Дата по 2
+              option(value="") Дата по 3
+          .col-md-4.col-sm-6
+            select.js-select2
+              option(value="") Приоритет
+              option(value="") Приоритет 1
+              option(value="") Приоритет 2
+              option(value="") Приоритет 3
+          .col-md-12
+            button.button.button-big--red #[i.icon-plus] Создать
+  
+  //- select.js-select2-multi(multiple='multiple')
+  //-   option Select A
+  //-   option Select B
+  //-   option Select C
+  //-   option Select D

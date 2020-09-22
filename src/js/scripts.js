@@ -1,15 +1,38 @@
 //= jquery.min.js
 //= jquery.magnific-popup.min.js
 //= calender.js
-//= constructor/main.js
 //= slick.min.js
 //= svgxuse.js
+//= select2.full.js
+//= jquery.MultiFile.min.js
+
+// constructor/main.js
 
 // window.onload = function(){
 //   $("#overlayer").delay(1000).fadeOut("slow");
 //   setTimeout(function() {
 //   }, 800);
 // }
+
+var sidebarRight = function() {
+    var mainSidebar = document.querySelector('#personal-kabinet'),
+        closeSidebar = document.querySelector('#close-perscab'),
+        openSidebar = document.querySelector('.admin-head .admin-dropdown'),
+        overlay = document.querySelector('#overlayer');
+    overlay.addEventListener('click', function() {
+        mainSidebar.classList.remove('is-show')
+        overlay.classList.remove('is-show')
+    })
+    openSidebar.addEventListener('click', function() {
+        mainSidebar.classList.add('is-show')
+        overlay.classList.add('is-show')
+    })
+    closeSidebar.addEventListener('click', function() {
+        mainSidebar.classList.remove('is-show')
+        overlay.classList.remove('is-show')
+    })
+};
+sidebarRight();
 
 function heightFooter() {
     var heightFoot = $('.footer').outerHeight();
@@ -20,7 +43,31 @@ $(window).resize(function() {
     heightFooter()
 });
 
-/*  */
+var horizontalScroll = function() {
+    var listScroll = document.querySelectorAll('.menu-kabinet--list li'),
+        widthList = 0;
+    listScroll.forEach(function(element) {
+        widthList += element.offsetWidth
+        console.log(widthList)
+    });
+    document.querySelector('.menu-kabinet--list').setAttribute("style", "width:" + widthList + "px;");
+
+};
+// horizontalScroll();
+// $(window).resize(function() {
+//     horizontalScroll();
+// });
+
+
+/* Select */
+
+$(".js-select2").select2({
+    minimumResultsForSearch: -1,
+    // templateResult: formatState,
+    // templateSelection: formatState,
+    // dropdownParent: $('.phone-modal')
+});
+$(".js-select2-multi").select2();
 
 /* Popup Window */
 
@@ -118,3 +165,32 @@ var menuOpen = function() {
 
 };
 menuOpen();
+
+$(document).ready(function() {
+    $(function() { // Init
+        $('.multi-pt').MultiFile({
+            max: 3,
+        });
+    });
+    // Drop container
+    $(".upload-label").on('click', function() {
+        $(this).next(".MultiFile-wrap").find('input:nth-last-child(2)').click()
+    });
+
+    // Tabs
+    tabs();
+    $('.tab-list li').click(function() {
+        var obj = $(this);
+        var container = obj.parents('.tab-container');
+        var index = obj.index();
+        $('.tab-list li', container).removeClass('active').eq(index).addClass('active');
+        $('.tab-pane .pane', container).hide().removeClass('active').eq(index).fadeIn().addClass('active');
+    });
+
+    function tabs() {
+        $('.tab-container').each(function() {
+            $('.tab-list li', this).eq(0).addClass('active');
+            $('.tab-pane .pane', this).eq(0).fadeIn().addClass('active');
+        });
+    }
+});

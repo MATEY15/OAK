@@ -1,0 +1,209 @@
+.user-profile--wrapper
+        
+  .user-profile
+    
+    .user-main
+      .user-img
+        img(src="img/user.jpg", alt="User Name")
+      .user-status
+        .cooperator
+          span Сотрудник
+        .status-live
+          span Онлайн
+      .user-status
+        .cooperator
+          span Сотрудник
+        .status-live.un-active
+          span Оффлайн
+      .status-checked
+        p Отсутствовал с 24.07.2020 (Отпуск)
+    
+    .my-awards
+      h4 Мои награды
+      .awards-wrapper
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+        .awards-items
+          +iconSvg('14', '14', '0 0 14 14', 'icon-awards')
+    
+    .my-task--wrapper
+      .my-task--head
+        h4 Мои задачи
+      .my-task--main
+        .my-task--items
+          p Делаю
+          .num-counter
+            span 2
+            span.counter-square 2
+        .my-task--items
+          p Помогаю
+          .num-counter
+            span 3
+            span.counter-square 3
+        .my-task--items
+          p Поручил
+          .num-counter
+            span 0
+            span.counter-square 0
+        .my-task--items
+          p Наблюдаю
+          .num-counter
+            span 0
+            span.counter-square 0
+
+  .user-application
+    .my-application
+      .heading-title.heading-small
+        h3 Мои заявки
+        .link-title
+          a(href="#") Смотреть все
+      
+      .table-application--wrapper
+        table.table-application
+          thead
+            tr
+              th(width="45px")
+              th(width="95px") №
+              th(width="115px") Создано
+              th Статус
+          tbody
+            tr
+              td
+                i.burger-table
+                  span
+                  span
+                  span
+              td 123
+              td 03.10.2020
+              td Отправлена
+
+            tr
+              td
+                i.burger-table
+                  span
+                  span
+                  span
+              td 123
+              td 03.10.2020
+              td Отправлена
+            tr
+              td
+                i.burger-table
+                  span
+                  span
+                  span
+              td 123
+              td 03.10.2020
+              td Отправлена
+
+    .task-default--wrapper.row
+      .col-md-6
+        .info-dropdown--item
+          a(href="#").info-dropdown
+            i.counter 2
+            span Кадровое делопроизводство
+            i.icon-arrow
+          .dropdown-hidden
+            ul.dropdown-list
+              li
+                a(href="#") На подбор
+              li
+                a(href="#") На прием
+
+      .col-md-6
+        .info-dropdown--item
+          a(href="#").info-dropdown
+            span Обучение
+            i.icon-arrow
+      
+      .col-md-6
+        .info-dropdown--item
+          a(href="#").info-dropdown
+            span Рабочее место и совещания
+            i.icon-arrow
+      
+      .col-md-6
+        .info-dropdown--item
+          a(href="#").info-dropdown
+            i.counter 1
+            span Финансы
+            i.icon-arrow
+          .dropdown-hidden
+            ul.dropdown-list
+              li
+                a(href="#") На подбор
+              li
+                a(href="#") На прием
+
+    .administrator--wrapper
+      .administrator-heading
+        .heading-title.heading-small
+          h3 Администрируемые разделы
+      .row
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Кадровое делопроизводство
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Подбор
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Кадровый резерв
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Адаптация
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Обучение
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Материальная мотивация
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Награды
+              i.icon-arrow
+        .col-md-6
+          .info-dropdown--item
+            a(href="#").info-dropdown
+              span Корпоративная культура
+              i.icon-arrow
+      
+      .link-more--big
+        a(href="#") Персональные данные #[i.icon-arrow]
