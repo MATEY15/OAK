@@ -34,28 +34,39 @@
       
       .personal-kabinet--content
 
-        include kabinet-include/profil
+        if(profil)
+          include kabinet-include/profil
 
-        //- include kabinet-include/phone
+        else if(phones)
+          include kabinet-include/phone
 
-        //- include kabinet-include/wage
+        else if(wage)
+          include kabinet-include/wage
+          .height-50
+          include kabinet-include/wage-v2
+        
+        else if(birthday)
+          include kabinet-include/birthday
 
-        //- include kabinet-include/wage-v2
-
-        //- include kabinet-include/birthday
-
-        //- include kabinet-include/training
-
-        //- include kabinet-include/vacation-schedule
-
-        //- include kabinet-include/vacation-registration
-
-        //- include kabinet-include/vacation-registration-v2
-
-        //- include kabinet-include/create-task
-
-        //- include kabinet-include/subordinate
-
-        //- include kabinet-include/subordinate-people
+        else if(training)
+          include kabinet-include/training
+        
+        else if(vacationSchedule)
+          include kabinet-include/vacation-schedule
+        
+        else if(vacationRegistration)
+          include kabinet-include/vacation-registration
+        
+        else if(vacationRegistration2)
+          include kabinet-include/vacation-registration-v2
+        
+        else if(createTask)
+          include kabinet-include/create-task
+        
+        else if(subordinate)
+          include kabinet-include/subordinate
+        
+        else if(subordinatePeople)
+          include kabinet-include/subordinate-people
 
       

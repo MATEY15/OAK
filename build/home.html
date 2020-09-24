@@ -292,32 +292,269 @@
       </div>
     </header>
     <main class="section_main">
-      <section class="section-default">
+      <section class="section-news">
         <div class="container">
-          <div class="sistems-wrapper">
-            <div class="heading-title">
-              <h3>Информационные системы</h3>
-              <div class="link-title"><a href="#">Смотреть все</a></div>
+          <div class="news-head">
+            <div class="heading-title title-white">
+              <h3>Новости</h3>
+              <div class="link-title"><a href="#">Все новости</a></div>
             </div>
-            <div class="height-50"></div>
-            <div class="info-sistems--block">
-              <ul class="list-sistems">
-                <li><a href="home.html" target="_blank">Главная</a></li>
-                <li><a href="phones.html" target="_blank">Телефоны</a></li>
-                <li><a href="wage.html" target="_blank">Заработная плата</a></li>
-                <li><a href="birthday.html" target="_blank">Дни рождения подразделения</a></li>
-                <li><a href="training.html" target="_blank">Обучение</a></li>
-                <li><a href="vacation-schedule.html" target="_blank">График отпусков</a></li>
-                <li><a href="vacation-registration.html" target="_blank">Оформление отпуска</a></li>
-                <li><a href="vacation-registration-v2.html" target="_blank">Оформление отпуска (Форма)</a></li>
-                <li><a href="create-task.html" target="_blank">Создание задачи</a></li>
-                <li><a href="subordinate.html" target="_blank">Подчиненные сотрудники</a></li>
-                <li><a href="subordinate-people.html" target="_blank">Подчиненные сотрудники (User)</a></li>
-              </ul>
+            <div class="slider-arrows--header"></div>
+          </div>
+          <div class="news-slider--wrapper">
+            <div class="news-slider">
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news1.jpg" alt="Slider img"></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"> 24 Августа 2020</span><a class="news-name" href="#">ОАК продолжает работу на «Армии-2020»</a></div>
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news2.jpg" alt="Slider img"/></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"/> 24 Августа 2020</span><a class="news-name" href="#">Первый глубокомодернизированный ракетоносец Ту-95МСМ совершил первый полет</a></div>
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news3.jpg" alt="Slider img"/></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"/> 24 Августа 2020</span><a class="news-name" href="#">ОАК примет участие в Международном военно-техническом форуме «АРМИЯ-2020»</a></div>
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news1.jpg" alt="Slider img"/></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"/> 24 Августа 2020</span><a class="news-name" href="#">ОАК продолжает работу на «Армии-2020»</a></div>
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news2.jpg" alt="Slider img"/></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"/> 24 Августа 2020</span><a class="news-name" href="#">Первый глубокомодернизированный ракетоносец Ту-95МСМ совершил первый полет</a></div>
+              <div class="news-slider--items"><a class="img-link" href="#"><img src="img/news3.jpg" alt="Slider img"/></a><span class="news-date"><img src="img/icon/clock.svg" alt="Time icon"/> 24 Августа 2020</span><a class="news-name" href="#">ОАК примет участие в Международном военно-техническом форуме «АРМИЯ-2020»</a></div>
             </div>
           </div>
         </div>
       </section>
+      <section class="section-phonebook">
+        <div class="container">
+          <div class="heading-title">
+            <h3>Телефонный справочник</h3>
+            <div class="link-title"><a href="#">Полный список сотрудников</a></div>
+          </div>
+          <div class="form-phonebook--wrapper">
+            <form class="form-phonebook" action="">
+              <input type="text" placeholder="ФИО / Подразделение / Телефон сотрудника">
+              <button class="btn-phonebook">
+                <svg class="icon-btn-search" width="30" height="30" viewBox="0 0 30 30">
+                  <use xlink:href="img/icon/sprite.svg#icon-btn-search"></use>
+                </svg> Найти
+              </button>
+            </form>
+          </div>
+          <div class="navigate-links--wrapper">
+            <div class="col-ds-3"><a class="navigate-links private-cabinet" href="#"><i class="counter">3</i><span>Личный<br> кабинет</span></a></div>
+            <div class="col-ds-3"><a class="navigate-links" href="#"><span>Бронирование переговорной</span><i class="icon-arrow"></i></a></div>
+            <div class="col-ds-3"><a class="navigate-links" href="#"><span>Заказ<br> пропусков</span><i class="icon-arrow"></i></a></div>
+            <div class="col-ds-3"><a class="navigate-links" href="#"><span>Техподдержка</span><i class="icon-arrow"></i></a></div>
+          </div>
+        </div>
+        <div class="height-50"></div>
+      </section>
+      <section class="section-birthday">
+        <div class="container">
+          <div class="birthday-calendar">
+            <div class="birthday-main col-ds-6">
+              <div class="heading-title">
+                <h3>Дни рождения</h3>
+                <div class="link-title"><a href="#">Смотреть все</a></div>
+              </div>
+              <div class="birthday-now--wrapper">
+                <div class="birthday-now--people">
+                  <div class="birthday-now--item">
+                    <div class="birthday-now--img">
+                      <div class="birthday-now--img-container"><img src="img/birthday-people.jpg" alt="Birthday"></div>
+                    </div>
+                    <div class="birthday-now--name">
+                      <p>Колесников Василий Андреевич</p><span>Сегодня</span>
+                    </div>
+                  </div>
+                  <div class="birthday-now--item">
+                    <div class="birthday-now--img">
+                      <div class="birthday-now--img-container"><img src="img/birthday-people.jpg" alt="Birthday"></div>
+                    </div>
+                    <div class="birthday-now--name">
+                      <p>Колесников Василий Андреевич</p><span>Сегодня</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="birthday-now--list">
+                  <ul class="birthday-now--ul">
+                    <li><span>30 августа</span>Колесников Василий Андреевич</li>
+                    <li><span>30 августа</span>Колесников Василий Андреевич</li>
+                    <li><span>30 августа</span>Колесников Василий Андреевич</li>
+                    <li><span>30 августа</span>Колесников Василий Андреевич</li>
+                    <li><span>30 августа</span>Колесников Василий Андреевич</li>
+                    <li><span>1 сентября</span>Колесников Василий Андреевич</li>
+                    <li><span>1 сентября</span>Колесников Василий Андреевич</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="calendar-main col-ds-6">
+              <div class="heading-title">
+                <h3>Календарь событий</h3>
+              </div>
+              <div class="calendar-version1">
+                <div id="head-calendar">
+                  <div id="mounth-now"></div>
+                  <div class="mounth-arrow"><span id="prev-mounth"></span><span id="next-mounth"></span></div>
+                </div><table id="calendar2" class="calendar-month">
+                	<thead>
+                		<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                	<tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-sistems">
+        <div class="container">
+          <div class="sistems-wrapper">
+            <div class="info-sistems col-ds-6">
+              <div class="heading-title">
+                <h3>Информационные системы</h3>
+                <div class="link-title"><a href="#">Смотреть все</a></div>
+              </div>
+              <div class="info-sistems--block">
+                <ul class="list-sistems">
+                  <li><a href="#">Система удаленного доступа к корпоративной почте</a></li>
+                  <li><a href="#">Сервер приложений 1</a></li>
+                  <li><a href="#">Сервер приложений 2</a></li>
+                  <li><a href="#">Система файлового обмена с ДЗО</a></li>
+                  <li><a href="#">Система Антиспам</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="order col-ds-6">
+              <div class="heading-title">
+                <h3>Приказы</h3>
+                <div class="link-title"><a href="#">Смотреть все</a></div>
+              </div>
+              <div class="order-block">
+                <div class="order-items"><span class="date">18 августа 2020</span>
+                  <p>Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon"> Скачать PDF 0.1 mb</a>
+                </div>
+                <div class="order-items"><span class="date">18 августа 2020</span>
+                  <p>Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon"> Скачать PDF 0.1 mb</a>
+                </div>
+                <div class="order-items"><span class="date">18 августа 2020</span>
+                  <p>Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon"> Скачать PDF 0.1 mb</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-media">
+        <div class="container">
+          <div class="media-wrapper">
+            <div class="col-ds-4">
+              <div class="heading-title title-white">
+                <h3>Фото</h3>
+              </div>
+              <div class="photo-wrapper popup-gallery">
+                <div class="gallery-block"><a class="gallery-img" href="img/media-photo1.jpg" title="Название картинки"><img src="img/media-photo.jpg" alt="Media Photo"></a></div>
+                <div class="gallery-block"><a class="gallery-img" href="img/media-photo1.jpg" title="Название картинки"><img src="img/media-photo.jpg" alt="Media Photo"></a></div>
+                <div class="gallery-block"><a class="gallery-img" href="img/media-photo1.jpg" title="Название картинки"><img src="img/media-photo.jpg" alt="Media Photo"></a></div>
+                <div class="gallery-block"><a class="gallery-img" href="img/media-photo1.jpg" title="Название картинки"><img src="img/media-photo.jpg" alt="Media Photo"></a></div>
+              </div>
+            </div>
+            <div class="col-ds-4">
+              <div class="heading-title title-white">
+                <h3>Видео</h3>
+              </div>
+              <div class="video-wrapper"><a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                  <div class="play-button"><span></span></div><img src="img/media-video.jpg" alt="Media Video"></a></div>
+            </div>
+            <div class="col-ds-4">
+              <div class="heading-title title-white">
+                <h3>Корпоративный журнал</h3>
+              </div>
+              <div class="document-wrapper">
+                <div class="document-img"><img src="img/media-document.jpg" alt="Document Load">
+                  <div class="link-document"><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon"> Скачать PDF 0.1 mb</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-job-group">
+        <div class="container">
+          <div class="heading-title">
+            <h3>Ваши рабочие группы</h3>
+            <div class="link-title"><a href="#">Смотреть все</a></div>
+          </div>
+          <div class="job-group">
+            <div class="col-ds-3"><a class="job-group--item" href="#">
+                <div class="job-group--icon">
+                  <svg class="icon-job1" width="48" height="48" viewBox="0 0 48 48">
+                    <use xlink:href="img/icon/sprite.svg#icon-job1"></use>
+                  </svg>
+                </div>
+                <div class="job-group--text">
+                  <h4>Анализ и статистика</h4><span>30 участников</span>
+                </div></a></div>
+            <div class="col-ds-3"><a class="job-group--item" href="#">
+                <div class="job-group--icon">
+                  <svg class="icon-job2" width="48" height="48" viewBox="0 0 48 48">
+                    <use xlink:href="img/icon/sprite.svg#icon-job2"></use>
+                  </svg>
+                </div>
+                <div class="job-group--text">
+                  <h4>Антикоррупция</h4><span>30 участников</span>
+                </div></a></div>
+            <div class="col-ds-3"><a class="job-group--item" href="#">
+                <div class="job-group--icon">
+                  <svg class="icon-job3" width="48" height="48" viewBox="0 0 48 48">
+                    <use xlink:href="img/icon/sprite.svg#icon-job3"></use>
+                  </svg>
+                </div>
+                <div class="job-group--text">
+                  <h4>База знаний</h4><span>132 участников</span>
+                </div></a></div>
+            <div class="col-ds-3"><a class="job-group--item" href="#">
+                <div class="job-group--icon">
+                  <svg class="icon-job4" width="51" height="51" viewBox="0 0 51 51">
+                    <use xlink:href="img/icon/sprite.svg#icon-job4"></use>
+                  </svg>
+                </div>
+                <div class="job-group--text">
+                  <h4>Новым сотрудникам</h4><span>30 участников</span>
+                </div></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="section--mass-media">
+        <div class="container">
+          <div class="mass-media row">
+            <div class="col-md-6">
+              <div class="heading-title">
+                <h3>Объявления</h3>
+                <div class="link-title"><a href="#">Смотреть все</a></div>
+              </div>
+              <div class="mass-media--wrapper">
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Электронная бибилиотека</p><a class="link-more" href="#">Подробнее</a>
+                </div>
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Электронная бибилиотека</p><a class="link-more" href="#">Подробнее</a>
+                </div>
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Электронная бибилиотека</p><a class="link-more" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="heading-title">
+                <h3>Обзоры СМИ</h3>
+                <div class="link-title"><a href="#">Смотреть все</a></div>
+              </div>
+              <div class="mass-media--wrapper">
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Дайджест СМИ по ОАК</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon">Скачать PDF 0.1 mb</a>
+                </div>
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Дайджест СМИ по ОАК</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon">Скачать PDF 0.1 mb</a>
+                </div>
+                <div class="default-links"><span class="date">18 августа 2020</span>
+                  <p>Дайджест СМИ по ОАК</p><a class="document-load" href="#"><img src="img/icon/document-download.svg" alt="Load Icon">Скачать PDF 0.1 mb</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="height-50"></div>
     </main>
     <footer class="footer">
       <div class="container">

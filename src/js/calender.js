@@ -45,13 +45,13 @@ function Calendar2(id, year, month) {
         massDays = "",
         nowDay = new Date();
 
-    document.querySelector('#' + id).addEventListener('click', function(e) {
-        var target = e.target;
+    // document.querySelector('#' + id).addEventListener('click', function(e) {
+    //     var target = e.target;
 
-        if (!target.children[0].innerText) {
-            console.log('good')
-        }
-    });
+    //     if (!target.children[0].innerText) {
+    //         console.log('good')
+    //     }
+    // });
 
     if (DNfirst != 0) {
         for (var i = 1; i < DNfirst; i++) calendar += '<td>';
@@ -99,13 +99,21 @@ function Calendar2(id, year, month) {
     if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) { // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
         // document.querySelector('#' + id + ' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
     }
-}
-Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
-// переключатель минус месяц
-document.querySelector('#head-calendar #prev-mounth').onclick = function() {
-        Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) - 1);
+
+    // переключатель минус месяц
+    document.querySelector('#head-calendar #prev-mounth').onclick = function() {
+            Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) - 1);
+        }
+        // переключатель плюс месяц
+    document.querySelector('#head-calendar #next-mounth').onclick = function() {
+        Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) + 1);
     }
-    // переключатель плюс месяц
-document.querySelector('#head-calendar #next-mounth').onclick = function() {
-    Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month) + 1);
+
+}
+
+
+
+if (document.querySelector("#calendar2")) {
+    console.log(document.querySelector("#calendar2"))
+    Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
 }

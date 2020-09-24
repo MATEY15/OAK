@@ -43,16 +43,16 @@ $(window).resize(function() {
     heightFooter()
 });
 
-var horizontalScroll = function() {
-    var listScroll = document.querySelectorAll('.menu-kabinet--list li'),
-        widthList = 0;
-    listScroll.forEach(function(element) {
-        widthList += element.offsetWidth
-        console.log(widthList)
-    });
-    document.querySelector('.menu-kabinet--list').setAttribute("style", "width:" + widthList + "px;");
+// var horizontalScroll = function() {
+//     var listScroll = document.querySelectorAll('.menu-kabinet--list li'),
+//         widthList = 0;
+//     listScroll.forEach(function(element) {
+//         widthList += element.offsetWidth
+//         console.log(widthList)
+//     });
+//     document.querySelector('.menu-kabinet--list').setAttribute("style", "width:" + widthList + "px;");
 
-};
+// };
 // horizontalScroll();
 // $(window).resize(function() {
 //     horizontalScroll();

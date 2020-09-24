@@ -1,0 +1,291 @@
+extends layout.pug
+
+block variabl
+	- var title = "OAK"
+	- var vacationRegistration = true
+
+block windowKabinet
+	include include/window-kabinet
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section-news
+			.container
+				.news-head
+					.heading-title.title-white
+						h3 Новости
+						.link-title
+							a(href="#") Все новости
+					.slider-arrows--header
+				.news-slider--wrapper
+					.news-slider
+						.news-slider--items
+							a(href="#").img-link
+								img(src="img/news1.jpg", alt="Slider img")
+							span.news-date #[img(src="img/icon/clock.svg", alt="Time icon")] 24 Августа 2020
+							a(href="#").news-name ОАК продолжает работу на «Армии-2020»
+						+sliderItem("img/news2.jpg", "Первый глубокомодернизированный ракетоносец Ту-95МСМ совершил первый полет")
+						+sliderItem("img/news3.jpg", "ОАК примет участие в Международном военно-техническом форуме «АРМИЯ-2020»")
+						+sliderItem("img/news1.jpg", "ОАК продолжает работу на «Армии-2020»")
+						+sliderItem("img/news2.jpg", "Первый глубокомодернизированный ракетоносец Ту-95МСМ совершил первый полет")
+						+sliderItem("img/news3.jpg", "ОАК примет участие в Международном военно-техническом форуме «АРМИЯ-2020»")
+		
+		section.section-phonebook
+			.container
+				.heading-title
+					h3 Телефонный справочник
+					.link-title
+						a(href="#") Полный список сотрудников
+				
+				.form-phonebook--wrapper
+					form(action="").form-phonebook
+						input(type="text" placeholder="ФИО / Подразделение / Телефон сотрудника")
+						button.btn-phonebook #[+iconSvg('30', '30', '0 0 30 30', 'icon-btn-search')] Найти
+				
+				.navigate-links--wrapper
+					.col-ds-3
+						a(href="#").navigate-links.private-cabinet
+							i.counter 3
+							span Личный#[br] кабинет
+					.col-ds-3
+						a(href="#").navigate-links
+							span Бронирование переговорной
+							i.icon-arrow
+					.col-ds-3
+						a(href="#").navigate-links
+							span Заказ#[br] пропусков
+							i.icon-arrow
+					.col-ds-3
+						a(href="#").navigate-links
+							span Техподдержка
+							i.icon-arrow
+
+			.height-50
+		
+		section.section-birthday
+			.container
+				.birthday-calendar
+					.birthday-main.col-ds-6
+						.heading-title
+							h3 Дни рождения
+							.link-title
+								a(href="#") Смотреть все
+						.birthday-now--wrapper
+							.birthday-now--people
+								.birthday-now--item
+									.birthday-now--img
+										.birthday-now--img-container
+											img(src="img/birthday-people.jpg", alt="Birthday")
+									.birthday-now--name
+										p Колесников Василий Андреевич
+										span Сегодня
+								.birthday-now--item
+									.birthday-now--img
+										.birthday-now--img-container
+											img(src="img/birthday-people.jpg", alt="Birthday")
+									.birthday-now--name
+										p Колесников Василий Андреевич
+										span Сегодня
+							
+							.birthday-now--list
+								ul.birthday-now--ul
+									li
+										span 30 августа
+										| Колесников Василий Андреевич
+									li
+										span 30 августа
+										| Колесников Василий Андреевич
+									li
+										span 30 августа
+										| Колесников Василий Андреевич
+									li
+										span 30 августа
+										| Колесников Василий Андреевич
+									li
+										span 30 августа
+										| Колесников Василий Андреевич
+									li
+										span 1 сентября
+										| Колесников Василий Андреевич
+									li
+										span 1 сентября
+										| Колесников Василий Андреевич
+
+					.calendar-main.col-ds-6
+						.heading-title
+							h3 Календарь событий
+						.calendar-version1
+							#head-calendar
+								#mounth-now
+								.mounth-arrow
+									span#prev-mounth
+									span#next-mounth
+							| <table id="calendar2" class="calendar-month">
+							| 	<thead>
+							| 		<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+							| 	<tbody>
+							| </table>
+				
+		section.section-sistems
+			.container
+				.sistems-wrapper
+					.info-sistems.col-ds-6
+						.heading-title
+							h3 Информационные системы
+							.link-title
+								a(href="#") Смотреть все
+						.info-sistems--block
+							ul.list-sistems
+								li
+									a(href="#") Система удаленного доступа к корпоративной почте
+								li
+									a(href="#") Сервер приложений 1
+								li
+									a(href="#") Сервер приложений 2
+								li
+									a(href="#") Система файлового обмена с ДЗО
+								li
+									a(href="#") Система Антиспам
+
+					.order.col-ds-6
+						.heading-title
+							h3 Приказы
+							.link-title
+								a(href="#") Смотреть все
+						.order-block
+							.order-items
+								span.date 18 августа 2020
+								p Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»
+								a(href="#").document-load #[img(src="img/icon/document-download.svg", alt="Load Icon")] Скачать PDF 0.1 mb
+							.order-items
+								span.date 18 августа 2020
+								p Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»
+								a(href="#").document-load #[img(src="img/icon/document-download.svg", alt="Load Icon")] Скачать PDF 0.1 mb
+							.order-items
+								span.date 18 августа 2020
+								p Приказ по основной деятельности № 136 от 18.08.2020 года «О возложении исполнения обязанностей заместителя Генерального директора по безопасности и режиму с 19 августа по 11 сентября 2020 года»
+								a(href="#").document-load #[img(src="img/icon/document-download.svg", alt="Load Icon")] Скачать PDF 0.1 mb
+
+		section.section-media
+			.container
+				.media-wrapper
+					.col-ds-4
+						.heading-title.title-white
+							h3 Фото
+						.photo-wrapper.popup-gallery
+							.gallery-block
+								a(href="img/media-photo1.jpg" title="Название картинки").gallery-img
+									img(src="img/media-photo.jpg", alt="Media Photo")
+							.gallery-block
+								a(href="img/media-photo1.jpg" title="Название картинки").gallery-img
+									img(src="img/media-photo.jpg", alt="Media Photo")
+							.gallery-block
+								a(href="img/media-photo1.jpg" title="Название картинки").gallery-img
+									img(src="img/media-photo.jpg", alt="Media Photo")
+							.gallery-block
+								a(href="img/media-photo1.jpg" title="Название картинки").gallery-img
+									img(src="img/media-photo.jpg", alt="Media Photo")
+					.col-ds-4
+						.heading-title.title-white
+							h3 Видео
+						.video-wrapper
+							a(href="http://www.youtube.com/watch?v=0O2aH4XLbto").popup-youtube
+								.play-button
+									span
+								img(src="img/media-video.jpg", alt="Media Video")
+					.col-ds-4
+						.heading-title.title-white
+							h3 Корпоративный журнал
+						.document-wrapper
+							.document-img
+								img(src="img/media-document.jpg", alt="Document Load")
+								.link-document
+									a(href="#").document-load #[img(src="img/icon/document-download.svg", alt="Load Icon")] Скачать PDF 0.1 mb
+
+		section.section-job-group
+			.container
+				.heading-title
+					h3 Ваши рабочие группы
+					.link-title
+						a(href="#") Смотреть все
+				.job-group
+					.col-ds-3
+						a(href="#").job-group--item
+							.job-group--icon
+								+iconSvg('48', '48', '0 0 48 48', 'icon-job1')
+							.job-group--text
+								h4 Анализ и статистика
+								span 30 участников
+					.col-ds-3
+						a(href="#").job-group--item
+							.job-group--icon
+								+iconSvg('48', '48', '0 0 48 48', 'icon-job2')
+							.job-group--text
+								h4 Антикоррупция
+								span 30 участников
+					.col-ds-3
+						a(href="#").job-group--item
+							.job-group--icon
+								+iconSvg('48', '48', '0 0 48 48', 'icon-job3')
+							.job-group--text
+								h4 База знаний
+								span 132 участников
+					.col-ds-3
+						a(href="#").job-group--item
+							.job-group--icon
+								+iconSvg('51', '51', '0 0 51 51', 'icon-job4')
+							.job-group--text
+								h4 Новым сотрудникам
+								span 30 участников
+		
+		section.section--mass-media
+			.container
+				.mass-media.row
+					.col-md-6
+						.heading-title
+							h3 Объявления
+							.link-title
+								a(href="#") Смотреть все
+						.mass-media--wrapper
+							.default-links
+								span.date 18 августа 2020
+								p Электронная бибилиотека
+								a(href="#").link-more Подробнее
+							.default-links
+								span.date 18 августа 2020
+								p Электронная бибилиотека
+								a(href="#").link-more Подробнее
+							.default-links
+								span.date 18 августа 2020
+								p Электронная бибилиотека
+								a(href="#").link-more Подробнее
+					.col-md-6
+						.heading-title
+							h3 Обзоры СМИ
+							.link-title
+								a(href="#") Смотреть все
+						.mass-media--wrapper
+							.default-links
+								span.date 18 августа 2020
+								p Дайджест СМИ по ОАК
+								a(href="#").document-load
+									img(src="img/icon/document-download.svg", alt="Load Icon")
+									| Скачать PDF 0.1 mb
+							.default-links
+								span.date 18 августа 2020
+								p Дайджест СМИ по ОАК
+								a(href="#").document-load
+									img(src="img/icon/document-download.svg", alt="Load Icon")
+									| Скачать PDF 0.1 mb
+							.default-links
+								span.date 18 августа 2020
+								p Дайджест СМИ по ОАК
+								a(href="#").document-load
+									img(src="img/icon/document-download.svg", alt="Load Icon")
+									| Скачать PDF 0.1 mb
+
+		.height-50

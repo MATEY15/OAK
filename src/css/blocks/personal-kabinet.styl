@@ -1,7 +1,7 @@
 .personal-kabinet
   // position fixed
   position absolute
-  right 0
+  right -100px
   top 0
   padding-left 30px
   width 1000px
@@ -13,11 +13,12 @@
   visibility hidden
   z-index 1000
   trn(.18s)
-  tt(100px, 0)
+  // tt(100px, 0)
   &.is-show
     opacity 1
     visibility visible
-    tt(0px, 0)
+    // tt(0px, 0)
+    right 0
   .personal-kabinet--wrapper
     overflow hidden
     height 100%
