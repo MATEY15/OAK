@@ -75,13 +75,13 @@ function Calendar2(id, year, month) {
 
         if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
             if (sliceOb) {
-                calendar += '<td class="today"><div class="date-wrapper"><ul class="date-list">' + infoDate + '</div><span class="day-default">' + i;
+                calendar += '<td class="today"><div class="date-wrapper"><ul class="date-list">' + infoDate + '</ul></div><span class="day-default">' + i;
             } else {
                 calendar += '<td class="today"><span class="day-default">' + i;
             }
         } else {
             if (sliceOb) {
-                calendar += '<td><div class="date-wrapper"><ul class="date-list">' + infoDate + '</div><span class="day-default">' + i;
+                calendar += '<td><div class="date-wrapper"><ul class="date-list">' + infoDate + '</ul></div><span class="day-default">' + i;
             } else {
                 calendar += '<td><span class="day-default">' + i;
             }

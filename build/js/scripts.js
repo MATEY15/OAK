@@ -83,13 +83,13 @@ function Calendar2(id, year, month) {
 
         if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
             if (sliceOb) {
-                calendar += '<td class="today"><div class="date-wrapper"><ul class="date-list">' + infoDate + '</div><span class="day-default">' + i;
+                calendar += '<td class="today"><div class="date-wrapper"><ul class="date-list">' + infoDate + '</ul></div><span class="day-default">' + i;
             } else {
                 calendar += '<td class="today"><span class="day-default">' + i;
             }
         } else {
             if (sliceOb) {
-                calendar += '<td><div class="date-wrapper"><ul class="date-list">' + infoDate + '</div><span class="day-default">' + i;
+                calendar += '<td><div class="date-wrapper"><ul class="date-list">' + infoDate + '</ul></div><span class="day-default">' + i;
             } else {
                 calendar += '<td><span class="day-default">' + i;
             }
@@ -6811,14 +6811,17 @@ var sidebarRight = function() {
     overlay.addEventListener('click', function() {
         mainSidebar.classList.remove('is-show')
         overlay.classList.remove('is-show')
+        document.querySelector('body').classList.remove('overflow')
     })
     openSidebar.addEventListener('click', function() {
         mainSidebar.classList.add('is-show')
         overlay.classList.add('is-show')
+        document.querySelector('body').classList.add('overflow')
     })
     closeSidebar.addEventListener('click', function() {
         mainSidebar.classList.remove('is-show')
         overlay.classList.remove('is-show')
+        document.querySelector('body').classList.remove('overflow')
     })
 };
 sidebarRight();

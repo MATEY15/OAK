@@ -22,14 +22,17 @@ var sidebarRight = function() {
     overlay.addEventListener('click', function() {
         mainSidebar.classList.remove('is-show')
         overlay.classList.remove('is-show')
+        document.querySelector('body').classList.remove('overflow')
     })
     openSidebar.addEventListener('click', function() {
         mainSidebar.classList.add('is-show')
         overlay.classList.add('is-show')
+        document.querySelector('body').classList.add('overflow')
     })
     closeSidebar.addEventListener('click', function() {
         mainSidebar.classList.remove('is-show')
         overlay.classList.remove('is-show')
+        document.querySelector('body').classList.remove('overflow')
     })
 };
 sidebarRight();

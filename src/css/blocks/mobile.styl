@@ -243,6 +243,8 @@
     padding 0
 
 @media (max-width: 854px)
+  .info-dropdown
+    max-width 100%
   .menu-kabinet--list
     display block
     white-space: nowrap
@@ -273,7 +275,47 @@
       padding 0 10px
 
 @media (max-width: 767px)
-
+  .media-wrapper
+    .col-ds-4
+      margin-bottom 30px
+  .list-sistems a
+    padding 20px 0
+  
+  .media-wrapper .heading-title
+    margin-bottom 20px
+  .section-media
+    padding-bottom 40px
+  .birthday-now--people
+    display flex
+    margin-bottom 30px
+  .birthday-now--item:not(:last-child)
+    margin-bottom 0
+    margin-right 30px
+  .form-phonebook
+    display flex
+    input
+      flex 1
+      border: 3px solid #ECEEEF
+      min-height 53px
+      padding 10px 15px
+      font-size 18px
+      font-family fr
+      color: #999999
+      &::-webkit-input-placeholder
+        color: #999999
+        font-size 18px
+      &::-moz-placeholder
+        color: #999999
+        font-size 18px
+      &:-ms-input-placeholder
+        color: #999999
+        font-size 18px
+      &:-moz-placeholder
+        color: #999999
+        font-size 18px
+  .news-slider--items .img-link
+    max-height: 145px
+    min-height: 145px
   .vacation-schedule--checbox .checkbox-small
     margin-bottom 20px
   .vacation-schedule--checbox
@@ -389,6 +431,31 @@
     max-width 100%
 
 @media (max-width: 600px)
+  .close-perscab
+    width 40px
+    height 40px
+    padding 11px
+    border-radius: 0 0 30px 0
+    background #828282
+    z-index 100
+    svg
+      width 14px
+      height 14px
+  .info-dropdown
+    border 5px solid #eceeef
+  .personal-kabinet
+    width 100%
+  .head-kabinet--name
+    min-height: 50px
+    padding 5px 0
+    padding-left 75px
+    width 100%
+  .close-perscab
+    // width 50px
+    // height 50px
+    top 0
+    left 0
+    // padding 13px
   .default-text p
     font-size 15px
     margin-bottom 12px
@@ -399,7 +466,33 @@
   .section--mass-media
     padding-bottom 30px
   
+@media (max-width: 599px)
+  max-height: 220px
+  min-height: 220px
 @media (max-width: 540px)
+  // .personal-kabinet--content
+  //   padding-left: 15px
+  //   padding-right: 15px
+  //   background: #333
+  //   height: calc(100vh - 121px)
+  //   padding-top: 32px
+  //   padding-bottom: 30px
+  //   overflow-y: auto
+  .info-dropdown
+    padding 15px
+    min-height: 80px
+    margin-bottom 15px
+  .administrator--wrapper
+    margin-top 10px
+  .user-profile
+    max-width 320px
+  .copy-footer,
+  .footer-bottom .col-md-2:last-child .footer-list--wrapper
+    margin-left 0
+  .navigate-links
+    padding: 15px
+    span
+      font-size 18px
   .subordinate-people--table
     overflow-y auto
     padding-bottom 10px
@@ -462,19 +555,7 @@
   .file-list--wrapper
     .file-list--items
       width 100%
-  .personal-kabinet
-    width 100%
-  .head-kabinet--name
-    min-height: 50px
-    padding 5px 0
-    padding-left 75px
-    width 100%
-  .close-perscab
-    width 50px
-    height 50px
-    top 0
-    left 0
-    padding 13px
+  
   .navigate-links--wrapper .col-ds-3,
   .job-group .col-ds-3
     width 100%
